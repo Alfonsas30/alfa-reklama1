@@ -1,3 +1,4 @@
+
 import { Phone, Mail, Clock, MessageCircle, Zap, Rocket, Star, Send, Calendar } from 'lucide-react';
 import { useState } from 'react';
 import { Input } from '@/components/ui/input';
@@ -45,7 +46,13 @@ const contactMethods = [
     icon: Calendar,
     title: 'Strategijos skambutis',
     description: 'Nemokama 30 min konsultacija su ekspertų komanda',
-    action: 'Rezervuoti laiką'
+    action: 'Rezervuoti laiką',
+    onClick: () => {
+      const phoneNumber = '+37544416678';
+      const message = encodeURIComponent('Sveiki! Norėčiau rezervuoti nemokamą 30 min strategijos konsultaciją su jūsų ekspertų komanda.');
+      const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+      window.open(whatsappUrl, '_blank');
+    }
   },
   {
     icon: Rocket,

@@ -1,4 +1,5 @@
 
+
 import { Zap, Heart, Mail, Phone, Linkedin, Facebook, Instagram } from 'lucide-react';
 
 const socialLinks = [
@@ -58,21 +59,21 @@ export const Footer = () => {
                 <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center">
                   <Mail size={20} className="text-white" />
                 </div>
-                <span className="font-medium text-sm break-words">info@alfareklama.ch</span>
+                <span className="font-medium text-sm break-all">info@alfareklama.ch</span>
               </div>
               
               <div className="flex items-center gap-4 text-white/70 hover:text-white transition-colors">
                 <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
                   <Mail size={20} className="text-white" />
                 </div>
-                <span className="font-medium text-sm break-words">gmbhinvest333@gmail.com</span>
+                <span className="font-medium text-sm break-all">gmbhinvest333@gmail.com</span>
               </div>
               
               <div className="flex items-center gap-4 text-white/70 hover:text-white transition-colors">
                 <div className="w-10 h-10 bg-gradient-to-r from-pink-500 to-cyan-500 rounded-lg flex items-center justify-center">
                   <Phone size={20} className="text-white" />
                 </div>
-                <span className="font-medium text-sm break-words">+375 44 416 66 78</span>
+                <span className="font-medium text-sm break-all">+375 44 416 66 78</span>
               </div>
             </div>
           </div>
@@ -148,3 +149,4 @@ export const Footer = () => {
     </footer>
   );
 };
+

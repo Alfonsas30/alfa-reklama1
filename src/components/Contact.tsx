@@ -1,4 +1,3 @@
-
 import { Phone, Mail, Clock, MessageCircle, Zap, Rocket, Star, Send, Calendar } from 'lucide-react';
 
 const contactInfo = [
@@ -111,7 +110,7 @@ export const Contact = () => {
                     {info.title}
                   </h3>
                   
-                  <p className="relative text-white/95 font-bold mb-3 text-sm md:text-base break-words">
+                  <p className="relative text-white/95 font-bold mb-3 text-sm md:text-base break-all">
                     {info.content}
                   </p>
 

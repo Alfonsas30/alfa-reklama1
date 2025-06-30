@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -95,6 +96,15 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Email breaking solution */
+.email-break {
+  word-break: break-all;
+  overflow-wrap: anywhere;
+  word-wrap: break-word;
+  hyphens: auto;
+  line-break: anywhere;
 }
 
 /* Custom animations for cyber design */

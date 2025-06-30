@@ -110,7 +110,7 @@ export const Contact = () => {
                     {info.title}
                   </h3>
                   
-                  <p className="relative text-white/95 font-bold mb-3 text-sm md:text-base break-all">
+                  <p className="relative text-white/95 font-bold mb-3 text-xs sm:text-sm md:text-base email-break">
                     {info.content}
                   </p>
 

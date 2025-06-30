@@ -1,10 +1,9 @@
-
-import { Zap, Heart, Mail, Phone, Linkedin, Facebook, Instagram } from 'lucide-react';
+import { Zap, Heart, Mail, Phone, Send, Facebook, Instagram } from 'lucide-react';
 
 const socialLinks = [
-  { icon: Linkedin, href: '#', label: 'LinkedIn' },
   { icon: Facebook, href: 'https://www.facebook.com/profile.php?id=61578020543147', label: 'Facebook' },
-  { icon: Instagram, href: 'https://www.instagram.com/norvaisasalfonsa/', label: 'Instagram' }
+  { icon: Instagram, href: 'https://www.instagram.com/norvaisasalfonsa/', label: 'Instagram' },
+  { icon: Send, href: 'https://t.me/snlvlt/137', label: 'Telegram' }
 ];
 
 const quickLinks = [

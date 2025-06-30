@@ -1,61 +1,62 @@
+
 import { ExternalLink, TrendingUp, Award, Zap, Target, Eye, Users, Rocket } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { getTranslation } from '../translations';
 
-const projects = [
-  {
-    title: 'E-komercijos imperija',
-    description: 'Pažangūs AI sprendimai su personalizuotomis kampanijomis',
-    result: '+847% investicijų grąža per 6 mėnesius',
-    icon: TrendingUp,
-    gradient: 'from-emerald-400 via-teal-500 to-cyan-500',
-    stats: ['2,4M pasekmė', '47% konversija', '890K € pajamos']
-  },
-  {
-    title: 'Prekės ženklo transformacija',
-    description: 'Visiškas rebrendas su kinematografine video serija',
-    result: '12M organinių peržiūrų',
-    icon: Award,
-    gradient: 'from-purple-400 via-pink-500 to-red-500',
-    stats: ['500% įsitraukimas', '89% ženklo atpažinimas', '25 apdovanojimai']
-  },
-  {
-    title: 'Virusinė kampanijos pradžia',
-    description: 'Daugiakanalė virusinė komunikacijos strategija',
-    result: '45M peržiūrų per savaitę',
-    icon: Zap,
-    gradient: 'from-yellow-400 via-orange-500 to-red-500',
-    stats: ['#1 tendencija', '2,8M pasidalinimai', '340% augimas']
-  },
-  {
-    title: 'B2B potencialių klientų generavimas',
-    description: 'LinkedIn tikslinis taikymas su AI automatizavimu',
-    result: '2 847 kvalifikuoti potencialūs klientai',
-    icon: Target,
-    gradient: 'from-blue-400 via-indigo-500 to-purple-500',
-    stats: ['94% potencialių klientų kokybė', '67% užbaigimo rodiklis', '2,1M € galimybių']
-  },
-  {
-    title: 'Interaktyvus interneto patirtis',
-    description: '3D interaktyvūs produktų pristatymai',
-    result: '384% buvimo laiko padidėjimas',
-    icon: Eye,
-    gradient: 'from-teal-400 via-cyan-500 to-blue-500',
-    stats: ['89% užbaigimas', '156% paspaudimų rodiklis', '4,9/5 įvertinimas']
-  },
-  {
-    title: 'Influencerių ekosistema',
-    description: 'Makro ir mikro influencerių kampanijos strategija',
-    result: '23M autentiška pasekmė',
-    icon: Users,
-    gradient: 'from-pink-400 via-purple-500 to-indigo-500',
-    stats: ['847 kūrėjai', '34% įsitraukimas', '1,8M € uždirbta medija']
-  }
-];
-
 export const Projects = () => {
   const { language } = useLanguage();
   const t = getTranslation(language);
+
+  const projects = [
+    {
+      title: t.project1Title,
+      description: t.project1Description,
+      result: t.project1Result,
+      icon: TrendingUp,
+      gradient: 'from-emerald-400 via-teal-500 to-cyan-500',
+      stats: [t.project1Stat1, t.project1Stat2, t.project1Stat3]
+    },
+    {
+      title: t.project2Title,
+      description: t.project2Description,
+      result: t.project2Result,
+      icon: Award,
+      gradient: 'from-purple-400 via-pink-500 to-red-500',
+      stats: [t.project2Stat1, t.project2Stat2, t.project2Stat3]
+    },
+    {
+      title: t.project3Title,
+      description: t.project3Description,
+      result: t.project3Result,
+      icon: Zap,
+      gradient: 'from-yellow-400 via-orange-500 to-red-500',
+      stats: [t.project3Stat1, t.project3Stat2, t.project3Stat3]
+    },
+    {
+      title: t.project4Title,
+      description: t.project4Description,
+      result: t.project4Result,
+      icon: Target,
+      gradient: 'from-blue-400 via-indigo-500 to-purple-500',
+      stats: [t.project4Stat1, t.project4Stat2, t.project4Stat3]
+    },
+    {
+      title: t.project5Title,
+      description: t.project5Description,
+      result: t.project5Result,
+      icon: Eye,
+      gradient: 'from-teal-400 via-cyan-500 to-blue-500',
+      stats: [t.project5Stat1, t.project5Stat2, t.project5Stat3]
+    },
+    {
+      title: t.project6Title,
+      description: t.project6Description,
+      result: t.project6Result,
+      icon: Users,
+      gradient: 'from-pink-400 via-purple-500 to-indigo-500',
+      stats: [t.project6Stat1, t.project6Stat2, t.project6Stat3]
+    }
+  ];
 
   return (
     <section id="projektai" className="py-32 bg-gradient-to-br from-black via-purple-900/20 to-black relative overflow-hidden">

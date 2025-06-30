@@ -1,55 +1,56 @@
+
 import { Monitor, Video, Target, Palette, TrendingUp, Globe, Rocket, Zap } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { getTranslation } from '../translations';
 
-const services = [
-  {
-    icon: Rocket,
-    title: 'AI Reklamos sistemos',
-    description: 'Dirbtinio intelekto varomi sprendimai, kurie automatiškai optimizuoja kampanijas realiu laiku ir garantuoja maksimalų ROI.',
-    gradient: 'from-cyan-400 via-blue-500 to-purple-500',
-    glow: 'group-hover:shadow-cyan-500/30'
-  },
-  {
-    icon: Video,
-    title: 'Kino kokybės turinys',
-    description: 'Holivudo standartų video produktai su 8K raiška, kurie užbūrią auditoriją ir formuoja emocijų ryšį su prekės ženklu.',
-    gradient: 'from-purple-400 via-pink-500 to-red-500',
-    glow: 'group-hover:shadow-purple-500/30'
-  },
-  {
-    icon: Target,
-    title: 'Tikslinis auditorijos taiklumas',
-    description: 'Kvantiniai algoritmai, kurie identifikuoja idealius klientus su 99.7% tikslumu ir maksimizuoja konversijas.',
-    gradient: 'from-green-400 via-emerald-500 to-teal-500',
-    glow: 'group-hover:shadow-emerald-500/30'
-  },
-  {
-    icon: Palette,
-    title: 'Ateities prekės ženklai',
-    description: 'Revoliuciniai brand identity sprendimai, kurie nustato naują industrijos standartą ir keičia rinkos dinamiką.',
-    gradient: 'from-orange-400 via-red-500 to-pink-500',
-    glow: 'group-hover:shadow-orange-500/30'
-  },
-  {
-    icon: TrendingUp,
-    title: 'Eksponentinis augimas',
-    description: 'Patentuotos growth hacking metodikos, kurios paverčia startup idėjas į rinkos dominatorius per 90 dienų.',
-    gradient: 'from-indigo-400 via-purple-500 to-pink-500',
-    glow: 'group-hover:shadow-indigo-500/30'
-  },
-  {
-    icon: Globe,
-    title: 'Holistiniai web sprendimai',
-    description: 'Interaktyvūs, neural network powered websaitai, kurie adaptuojasi prie kiekvieno lankytojo ir maksimizuoja engagement.',
-    gradient: 'from-teal-400 via-cyan-500 to-blue-500',
-    glow: 'group-hover:shadow-teal-500/30'
-  }
-];
-
 export const Services = () => {
   const { language } = useLanguage();
   const t = getTranslation(language);
+
+  const services = [
+    {
+      icon: Rocket,
+      title: t.service1Title,
+      description: t.service1Description,
+      gradient: 'from-cyan-400 via-blue-500 to-purple-500',
+      glow: 'group-hover:shadow-cyan-500/30'
+    },
+    {
+      icon: Video,
+      title: t.service2Title,
+      description: t.service2Description,
+      gradient: 'from-purple-400 via-pink-500 to-red-500',
+      glow: 'group-hover:shadow-purple-500/30'
+    },
+    {
+      icon: Target,
+      title: t.service3Title,
+      description: t.service3Description,
+      gradient: 'from-green-400 via-emerald-500 to-teal-500',
+      glow: 'group-hover:shadow-emerald-500/30'
+    },
+    {
+      icon: Palette,
+      title: t.service4Title,
+      description: t.service4Description,
+      gradient: 'from-orange-400 via-red-500 to-pink-500',
+      glow: 'group-hover:shadow-orange-500/30'
+    },
+    {
+      icon: TrendingUp,
+      title: t.service5Title,
+      description: t.service5Description,
+      gradient: 'from-indigo-400 via-purple-500 to-pink-500',
+      glow: 'group-hover:shadow-indigo-500/30'
+    },
+    {
+      icon: Globe,
+      title: t.service6Title,
+      description: t.service6Description,
+      gradient: 'from-teal-400 via-cyan-500 to-blue-500',
+      glow: 'group-hover:shadow-teal-500/30'
+    }
+  ];
 
   return (
     <section id="paslaugos" className="py-32 bg-gradient-to-br from-black via-gray-900 to-slate-900 relative overflow-hidden">

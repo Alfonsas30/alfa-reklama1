@@ -1,3 +1,4 @@
+
 import { Zap, Heart, Mail, Phone, Send, Facebook, Instagram } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { getTranslation } from '../translations';
@@ -52,8 +53,7 @@ export const Footer = () => {
             </div>
             
             <p className="text-white/80 text-lg leading-relaxed max-w-md">
-              Transformuojame verslo ateities trajektorijas per inovatyvius 
-              skaitmeninio marketingo sprendimus ir AI technologijas.
+              {t.companyDescription}
             </p>
 
             {/* Contact Info */}

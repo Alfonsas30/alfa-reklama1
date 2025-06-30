@@ -1,31 +1,36 @@
 
 import { Phone, Mail, Clock } from 'lucide-react';
-
-const contactInfo = [
-  {
-    icon: Phone,
-    title: 'Premium linija',
-    content: '+375 44 416 66 78',
-    description: '24/7 VIP palaikymas',
-    gradient: 'from-green-400 to-emerald-500'
-  },
-  {
-    icon: Mail,
-    title: 'El. pašto kontaktai',
-    content: 'info@alfareklama.ch\ngmbhinvest333@gmail.com',
-    description: 'Verslo ir bendrieji užklausimai',
-    gradient: 'from-blue-400 to-cyan-500'
-  },
-  {
-    icon: Clock,
-    title: 'Elito darbo laikas',
-    content: 'Pr–Pn, 9:00–16:00',
-    description: 'Papildomos funkcijos 24/7',
-    gradient: 'from-orange-400 to-red-500'
-  }
-];
+import { useLanguage } from '../../contexts/LanguageContext';
+import { getTranslation } from '../../translations';
 
 export const ContactInfo = () => {
+  const { language } = useLanguage();
+  const t = getTranslation(language);
+
+  const contactInfo = [
+    {
+      icon: Phone,
+      title: t.contactInfo1Title,
+      content: t.contactInfo1Content,
+      description: t.contactInfo1Description,
+      gradient: 'from-green-400 to-emerald-500'
+    },
+    {
+      icon: Mail,
+      title: t.contactInfo2Title,
+      content: t.contactInfo2Content,
+      description: t.contactInfo2Description,
+      gradient: 'from-blue-400 to-cyan-500'
+    },
+    {
+      icon: Clock,
+      title: t.contactInfo3Title,
+      content: t.contactInfo3Content,
+      description: t.contactInfo3Description,
+      gradient: 'from-orange-400 to-red-500'
+    }
+  ];
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-24">
       {contactInfo.map((info, index) => {

@@ -1,40 +1,41 @@
+
 import { Award, Users, Target, Zap, Rocket, Globe, Brain, Diamond, Star, Shield } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { getTranslation } from '../translations';
 
-const features = [
-  {
-    icon: Brain,
-    title: 'AI technologijų pionieriai',
-    description: 'Dirbtinio intelekto sprendimai optimaliam rezultatui'
-  },
-  {
-    icon: Rocket,
-    title: '15+ metų lyderystė',
-    description: 'Rinkos lyderiai skaitmeninio marketingo srityje'
-  },
-  {
-    icon: Diamond,
-    title: 'Premium vykdymas',
-    description: 'Aukščiausios kokybės sprendimai prabangos segmentui'
-  },
-  {
-    icon: Globe,
-    title: 'Globalus tinklas',
-    description: 'Tarptautinių kampanijų ekspertai 47 šalyse'
-  }
-];
-
-const achievements = [
-  { number: '500M+', label: 'Bendras pasiekimas' },
-  { number: '2 847%', label: 'Vidutinė investicijų grąža' },
-  { number: '89', label: 'Pramonės apdovanojimai' },
-  { number: '99,2%', label: 'Klientų išlaikymas' }
-];
-
 export const About = () => {
   const { language } = useLanguage();
   const t = getTranslation(language);
+
+  const features = [
+    {
+      icon: Brain,
+      title: t.aboutFeature1Title,
+      description: t.aboutFeature1Description
+    },
+    {
+      icon: Rocket,
+      title: t.aboutFeature2Title,
+      description: t.aboutFeature2Description
+    },
+    {
+      icon: Diamond,
+      title: t.aboutFeature3Title,
+      description: t.aboutFeature3Description
+    },
+    {
+      icon: Globe,
+      title: t.aboutFeature4Title,
+      description: t.aboutFeature4Description
+    }
+  ];
+
+  const achievements = [
+    { number: t.aboutAchievement1, label: t.aboutAchievement1Label },
+    { number: t.aboutAchievement2, label: t.aboutAchievement2Label },
+    { number: t.aboutAchievement3, label: t.aboutAchievement3Label },
+    { number: t.aboutAchievement4, label: t.aboutAchievement4Label }
+  ];
 
   return (
     <section id="apie" className="py-32 bg-gradient-to-br from-black via-slate-900/50 to-purple-900/30 relative overflow-hidden">
@@ -74,18 +75,14 @@ export const About = () => {
             <div className="space-y-10">
               <div className="space-y-8">
                 <h3 className="text-4xl font-black text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                  Revoliuciniai sprendimai ateities verslui
+                  {t.aboutExtendedTitle}
                 </h3>
                 <p className="text-xl text-white/90 leading-relaxed">
-                  Mūsų misija – transformuoti kiekvieną klientą į savo srities revoliucionierių. 
-                  Naudodami pažangiausias AI technologijas, neuromarketingo įžvalgas ir 
-                  didelių duomenų analitikos sprendimus, kuriame kampanijas, kurios ne tik pasiekia tikslus, 
-                  bet ir formuoja naują pramonės standartą.
+                  {t.aboutExtendedDescription1}
                 </p>
                 
                 <p className="text-xl text-white/90 leading-relaxed">
-                  Kiekvienas projektas – tai unikalus meno kūrinys, gimstantis iš strateginio 
-                  mąstymo, kūrybinio genijaus ir technologinių inovacijų simbiozės.
+                  {t.aboutExtendedDescription2}
                 </p>
               </div>
             </div>
@@ -93,17 +90,15 @@ export const About = () => {
             <div className="relative">
               <div className="relative bg-gradient-to-br from-cyan-500/20 via-purple-500/20 to-pink-500/20 backdrop-blur-xl rounded-3xl p-12 border border-cyan-400/30 hover:border-cyan-400/50 transition-all duration-500 hover:scale-105">
                 <h3 className="text-4xl font-black mb-8 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                  Mūsų vizija 2030
+                  {t.aboutVisionTitle}
                 </h3>
                 <p className="text-xl text-white/90 leading-relaxed mb-8">
-                  Tapti globaliu lyderiu AI technologijų marketingo sprendimuose, 
-                  formuojančiu ateities komunikacijos standartus ir keičiančiu 
-                  tai, kaip prekės ženklai sąveikauja su auditorija.
+                  {t.aboutVisionDescription}
                 </p>
                 
                 <div className="flex items-center gap-4">
                   <Shield size={32} className="text-cyan-400" />
-                  <span className="text-lg font-bold text-white/90">Garantuojame rezultatus</span>
+                  <span className="text-lg font-bold text-white/90">{t.aboutVisionGuarantee}</span>
                 </div>
                 
                 {/* Floating elements */}

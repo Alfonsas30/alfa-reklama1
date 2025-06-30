@@ -4,8 +4,13 @@ import { Star, Send } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
+import { useLanguage } from '../../contexts/LanguageContext';
+import { getTranslation } from '../../translations';
 
 export const ContactForm = () => {
+  const { language } = useLanguage();
+  const t = getTranslation(language);
+  
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -50,10 +55,10 @@ export const ContactForm = () => {
     <div id="contact-form" className="mb-20 bg-gradient-to-br from-cyan-500/10 via-purple-500/10 to-pink-500/10 backdrop-blur-xl rounded-3xl p-12 border border-cyan-400/30 hover:border-cyan-400/50 transition-all duration-500">
       <div className="text-center mb-12">
         <h3 className="text-4xl font-black mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-          Susisiekite su mumis
+          {t.contactFormTitle}
         </h3>
         <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
-          Palikite savo kontaktus ir mes susisieksime su jumis per 24 valandas
+          {t.contactFormDescription}
         </p>
       </div>
 
@@ -63,10 +68,10 @@ export const ContactForm = () => {
             <Star size={48} className="text-white" />
           </div>
           <h4 className="text-3xl font-black text-white mb-4">
-            Ačiū už jūsų žinutę!
+            {t.contactFormSuccessTitle}
           </h4>
           <p className="text-white/80 text-lg">
-            Susisieksime su jumis artimiausiu metu.
+            {t.contactFormSuccessDescription}
           </p>
         </div>
       ) : (
@@ -78,7 +83,7 @@ export const ContactForm = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
             <div className="space-y-2">
               <label htmlFor="name" className="text-white font-bold">
-                Vardas *
+                {t.contactFormNameLabel}
               </label>
               <Input
                 id="name"
@@ -88,13 +93,13 @@ export const ContactForm = () => {
                 value={formData.name}
                 onChange={handleInputChange}
                 className="bg-black/40 border-cyan-400/30 text-white placeholder:text-white/50 focus:border-cyan-400 focus:ring-cyan-400/20"
-                placeholder="Jūsų vardas"
+                placeholder={t.contactFormNamePlaceholder}
               />
             </div>
             
             <div className="space-y-2">
               <label htmlFor="email" className="text-white font-bold">
-                El. paštas *
+                {t.contactFormEmailLabel}
               </label>
               <Input
                 id="email"
@@ -104,14 +109,14 @@ export const ContactForm = () => {
                 value={formData.email}
                 onChange={handleInputChange}
                 className="bg-black/40 border-cyan-400/30 text-white placeholder:text-white/50 focus:border-cyan-400 focus:ring-cyan-400/20"
-                placeholder="jusu@email.com"
+                placeholder={t.contactFormEmailPlaceholder}
               />
             </div>
           </div>
           
           <div className="space-y-2 mb-8">
             <label htmlFor="message" className="text-white font-bold">
-              Žinutė *
+              {t.contactFormMessageLabel}
             </label>
             <Textarea
               id="message"
@@ -121,7 +126,7 @@ export const ContactForm = () => {
               onChange={handleInputChange}
               rows={6}
               className="bg-black/40 border-cyan-400/30 text-white placeholder:text-white/50 focus:border-cyan-400 focus:ring-cyan-400/20 resize-none"
-              placeholder="Parašykite savo žinutę..."
+              placeholder={t.contactFormMessagePlaceholder}
             />
           </div>
           
@@ -130,7 +135,7 @@ export const ContactForm = () => {
             disabled={isSubmitting}
             className="w-full bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 text-white font-bold py-4 text-lg hover:shadow-2xl hover:shadow-cyan-500/30 transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
           >
-            {isSubmitting ? 'Siunčiama...' : 'Siųsti žinutę'}
+            {isSubmitting ? t.contactFormSubmitting : t.contactFormSubmit}
             {!isSubmitting && <Send size={20} className="ml-2" />}
           </Button>
         </form>

@@ -95,11 +95,86 @@ export const lt = {
   aboutTitle2: 'FILOSOFIJA',
   aboutDescription: 'Mes nesame tiesiog agentūra – mes esame transformacijos katalizatorius, kuris keičia verslo ateities trajektorijas',
   
+  // About features
+  aboutFeature1Title: 'AI technologijų pionieriai',
+  aboutFeature1Description: 'Dirbtinio intelekto sprendimai optimaliam rezultatui',
+  aboutFeature2Title: '15+ metų lyderystė',
+  aboutFeature2Description: 'Rinkos lyderiai skaitmeninio marketingo srityje',
+  aboutFeature3Title: 'Premium vykdymas',
+  aboutFeature3Description: 'Aukščiausios kokybės sprendimai prabangos segmentui',
+  aboutFeature4Title: 'Globalus tinklas',
+  aboutFeature4Description: 'Tarptautinių kampanijų ekspertai 47 šalyse',
+  
+  // About achievements
+  aboutAchievement1: '500M+',
+  aboutAchievement1Label: 'Bendras pasiekimas',
+  aboutAchievement2: '2 847%',
+  aboutAchievement2Label: 'Vidutinė investicijų grąža',
+  aboutAchievement3: '89',
+  aboutAchievement3Label: 'Pramonės apdovanojimai',
+  aboutAchievement4: '99,2%',
+  aboutAchievement4Label: 'Klientų išlaikymas',
+  
+  // About extended content
+  aboutExtendedTitle: 'Revoliuciniai sprendimai ateities verslui',
+  aboutExtendedDescription1: 'Mūsų misija – transformuoti kiekvieną klientą į savo srities revoliucionierių. Naudodami pažangiausias AI technologijas, neuromarketingo įžvalgas ir didelių duomenų analitikos sprendimus, kuriame kampanijas, kurios ne tik pasiekia tikslus, bet ir formuoja naują pramonės standartą.',
+  aboutExtendedDescription2: 'Kiekvienas projektas – tai unikalus meno kūrinys, gimstantis iš strateginio mąstymo, kūrybinio genijaus ir technologinių inovacijų simbiozės.',
+  aboutVisionTitle: 'Mūsų vizija 2030',
+  aboutVisionDescription: 'Tapti globaliu lyderiu AI technologijų marketingo sprendimuose, formuojančiu ateities komunikacijos standartus ir keičiančiu tai, kaip prekės ženklai sąveikauja su auditorija.',
+  aboutVisionGuarantee: 'Garantuojame rezultatus',
+  
   // Contact
   contactLabel: 'PREMIUM KONSULTACIJOS PRIEINAMOS',
   contactTitle1: 'SUSISIEKITE',
   contactTitle2: 'SU MŪSŲ KOMANDA',
   contactDescription: 'Pasiruošę transformuoti savo verslą? Susisiekite su premium ekspertų komanda ir pradėkite kelionę į neprilygstamą sėkmę.',
+  
+  // Contact Info
+  contactInfo1Title: 'Premium linija',
+  contactInfo1Content: '+375 44 416 66 78',
+  contactInfo1Description: '24/7 VIP palaikymas',
+  contactInfo2Title: 'El. pašto kontaktai',
+  contactInfo2Content: 'info@alfareklama.ch\ngmbhinvest333@gmail.com',
+  contactInfo2Description: 'Verslo ir bendrieji užklausimai',
+  contactInfo3Title: 'Elito darbo laikas',
+  contactInfo3Content: 'Pr–Pn, 9:00–16:00',
+  contactInfo3Description: 'Papildomos funkcijos 24/7',
+  
+  // Contact Methods
+  contactMethod1Title: 'WhatsApp VIP',
+  contactMethod1Description: 'Momentinis atsakymas su pirmumo palaikymu',
+  contactMethod1Action: 'Pradėti pokalbį',
+  contactMethod2Title: 'Strategijos skambutis',
+  contactMethod2Description: 'Nemokama 30 min konsultacija su ekspertų komanda',
+  contactMethod2Action: 'Rezervuoti laiką',
+  contactMethod3Title: 'Projekto pradžia',
+  contactMethod3Description: 'Greitas projekto startas per 48 valandas',
+  contactMethod3Action: 'Pradėti dabar',
+  
+  // Contact Form
+  contactFormTitle: 'Susisiekite su mumis',
+  contactFormDescription: 'Palikite savo kontaktus ir mes susisieksime su jumis per 24 valandas',
+  contactFormNameLabel: 'Vardas *',
+  contactFormNamePlaceholder: 'Jūsų vardas',
+  contactFormEmailLabel: 'El. paštas *',
+  contactFormEmailPlaceholder: 'jusu@email.com',
+  contactFormMessageLabel: 'Žinutė *',
+  contactFormMessagePlaceholder: 'Parašykite savo žinutę...',
+  contactFormSubmit: 'Siųsti žinutę',
+  contactFormSubmitting: 'Siunčiama...',
+  contactFormSuccessTitle: 'Ačiū už jūsų žinutę!',
+  contactFormSuccessDescription: 'Susisieksime su jumis artimiausiu metu.',
+  
+  // Contact CTA
+  contactCtaTitle: 'Pasiruošę kurti istoriją?',
+  contactCtaDescription: 'Jūsų sėkmės istorija prasideda čia. Susisiekite dabar ir gaukite individualizuotą strategiją, kuri transformuos jūsų verslą į ateities lyderį.',
+  contactCtaButtonStart: 'Pradėti dabar',
+  contactCtaButtonProjects: 'Projektai',
+  
+  // Contact Methods WhatsApp messages
+  whatsappMessage1: 'Sveiki! Norėčiau sužinoti daugiau apie jūsų paslaugas ir galimybes.',
+  whatsappMessage2: 'Sveiki! Norėčiau rezervuoti nemokamą 30 min strategijos konsultaciją su jūsų ekspertų komanda.',
+  whatsappMessage3: 'Sveiki! Noriu pradėti naują projektą ir domina greitas startas per 48 valandas. Galime aptarti detales?',
   
   // Footer
   quickLinks: 'Greitos nuorodos',

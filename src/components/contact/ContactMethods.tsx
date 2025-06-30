@@ -1,46 +1,51 @@
 
 import { MessageCircle, Calendar, Rocket, Send } from 'lucide-react';
-
-const contactMethods = [
-  {
-    icon: MessageCircle,
-    title: 'WhatsApp VIP',
-    description: 'Momentinis atsakymas su pirmumo palaikymu',
-    action: 'Pradėti pokalbį',
-    onClick: () => {
-      const phoneNumber = '+37544416678';
-      const message = encodeURIComponent('Sveiki! Norėčiau sužinoti daugiau apie jūsų paslaugas ir galimybes.');
-      const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
-      window.open(whatsappUrl, '_blank');
-    }
-  },
-  {
-    icon: Calendar,
-    title: 'Strategijos skambutis',
-    description: 'Nemokama 30 min konsultacija su ekspertų komanda',
-    action: 'Rezervuoti laiką',
-    onClick: () => {
-      const phoneNumber = '+37544416678';
-      const message = encodeURIComponent('Sveiki! Norėčiau rezervuoti nemokamą 30 min strategijos konsultaciją su jūsų ekspertų komanda.');
-      const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
-      window.open(whatsappUrl, '_blank');
-    }
-  },
-  {
-    icon: Rocket,
-    title: 'Projekto pradžia',
-    description: 'Greitas projekto startas per 48 valandas',
-    action: 'Pradėti dabar',
-    onClick: () => {
-      const phoneNumber = '+37544416678';
-      const message = encodeURIComponent('Sveiki! Noriu pradėti naują projektą ir domina greitas startas per 48 valandas. Galime aptarti detales?');
-      const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
-      window.open(whatsappUrl, '_blank');
-    }
-  }
-];
+import { useLanguage } from '../../contexts/LanguageContext';
+import { getTranslation } from '../../translations';
 
 export const ContactMethods = () => {
+  const { language } = useLanguage();
+  const t = getTranslation(language);
+
+  const contactMethods = [
+    {
+      icon: MessageCircle,
+      title: t.contactMethod1Title,
+      description: t.contactMethod1Description,
+      action: t.contactMethod1Action,
+      onClick: () => {
+        const phoneNumber = '+37544416678';
+        const message = encodeURIComponent(t.whatsappMessage1);
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+        window.open(whatsappUrl, '_blank');
+      }
+    },
+    {
+      icon: Calendar,
+      title: t.contactMethod2Title,
+      description: t.contactMethod2Description,
+      action: t.contactMethod2Action,
+      onClick: () => {
+        const phoneNumber = '+37544416678';
+        const message = encodeURIComponent(t.whatsappMessage2);
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+        window.open(whatsappUrl, '_blank');
+      }
+    },
+    {
+      icon: Rocket,
+      title: t.contactMethod3Title,
+      description: t.contactMethod3Description,
+      action: t.contactMethod3Action,
+      onClick: () => {
+        const phoneNumber = '+37544416678';
+        const message = encodeURIComponent(t.whatsappMessage3);
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+        window.open(whatsappUrl, '_blank');
+      }
+    }
+  ];
+
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-20">
       {contactMethods.map((method, index) => {

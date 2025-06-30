@@ -1,5 +1,5 @@
 
-import { Phone, Mail, MapPin, Clock, MessageCircle, Zap, Rocket, Star, Send, Calendar } from 'lucide-react';
+import { Phone, Mail, Clock, MessageCircle, Zap, Rocket, Star, Send, Calendar } from 'lucide-react';
 
 const contactInfo = [
   {
@@ -11,16 +11,16 @@ const contactInfo = [
   },
   {
     icon: Mail,
-    title: 'Vadovų el. paštas',
-    content: 'hello@alfareklama.ch',
-    description: 'Tiesioginė linija į CEO',
+    title: 'Pagrindinės el. paštas',
+    content: 'info@alfareklama.ch',
+    description: 'Tiesioginė linija į komandą',
     gradient: 'from-blue-400 to-cyan-500'
   },
   {
-    icon: MapPin,
-    title: 'Būstinės vieta',
-    content: 'Šveicarija, Ciurichas',
-    description: 'Premium verslo rajonas',
+    icon: Mail,
+    title: 'Verslo el. paštas',
+    content: 'gmbhinvest333@gmail.com',
+    description: 'Verslo užklausoms',
     gradient: 'from-purple-400 to-pink-500'
   },
   {

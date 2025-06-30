@@ -1,5 +1,4 @@
-
-import { Zap, Heart, Mail, Phone, MapPin, Linkedin, Facebook, Instagram } from 'lucide-react';
+import { Zap, Heart, Mail, Phone, Linkedin, Facebook, Instagram } from 'lucide-react';
 
 const socialLinks = [
   { icon: Linkedin, href: '#', label: 'LinkedIn' },
@@ -58,21 +57,21 @@ export const Footer = () => {
                 <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center">
                   <Mail size={20} className="text-white" />
                 </div>
-                <span className="font-medium">hello@alfareklama.ch</span>
+                <span className="font-medium">info@alfareklama.ch</span>
               </div>
               
               <div className="flex items-center gap-4 text-white/70 hover:text-white transition-colors">
                 <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
-                  <Phone size={20} className="text-white" />
+                  <Mail size={20} className="text-white" />
                 </div>
-                <span className="font-medium">+375 44 416 66 78</span>
+                <span className="font-medium">gmbhinvest333@gmail.com</span>
               </div>
               
               <div className="flex items-center gap-4 text-white/70 hover:text-white transition-colors">
                 <div className="w-10 h-10 bg-gradient-to-r from-pink-500 to-cyan-500 rounded-lg flex items-center justify-center">
-                  <MapPin size={20} className="text-white" />
+                  <Phone size={20} className="text-white" />
                 </div>
-                <span className="font-medium">Šveicarija, Ciurichas</span>
+                <span className="font-medium">+375 44 416 66 78</span>
               </div>
             </div>
           </div>
@@ -128,7 +127,7 @@ export const Footer = () => {
             <div className="flex items-center gap-3 text-white/60 text-sm">
               <span>© 2025 Alfa Reklama. Sukurta su</span>
               <Heart size={16} className="text-red-400 fill-current animate-pulse" />
-              <span>Šveicarijoje</span>
+              <span>aistra ir profesionalumu</span>
             </div>
 
             <div className="text-white/40 text-sm text-center">

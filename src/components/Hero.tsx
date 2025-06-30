@@ -1,7 +1,5 @@
-
 import { ArrowRight, Sparkles, Zap, Play } from 'lucide-react';
-import { ThreeScene } from './ThreeScene';
-import { ErrorBoundary } from './ErrorBoundary';
+import { BackgroundAnimation } from './BackgroundAnimation';
 
 export const Hero = () => {
   const scrollToSection = (sectionId: string) => {
@@ -13,9 +11,7 @@ export const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
-      <ErrorBoundary>
-        <ThreeScene />
-      </ErrorBoundary>
+      <BackgroundAnimation />
       
       {/* Cyber grid background */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.03)_1px,transparent_1px)] bg-[size:50px_50px] pointer-events-none"></div>

@@ -1,6 +1,7 @@
 
 import { ArrowRight, Play } from 'lucide-react';
 import { ThreeScene } from './ThreeScene';
+import { ErrorBoundary } from './ErrorBoundary';
 
 export const Hero = () => {
   const scrollToSection = (sectionId: string) => {
@@ -12,7 +13,9 @@ export const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <ThreeScene />
+      <ErrorBoundary>
+        <ThreeScene />
+      </ErrorBoundary>
       
       {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/20 via-purple-900/10 to-pink-900/20 z-10"></div>

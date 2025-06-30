@@ -1,53 +1,58 @@
 
 import { Canvas } from '@react-three/fiber';
-import { OrbitControls, Sphere, Box } from '@react-three/drei';
+import { OrbitControls, Sphere, Box, MeshDistortMaterial, Float, Text, Environment } from '@react-three/drei';
 import { useRef, Suspense } from 'react';
 import { useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 
-const AnimatedSphere = ({ position }: { position: [number, number, number] }) => {
-  const meshRef = useRef<THREE.Mesh>(null);
-  
-  useFrame((state) => {
-    if (meshRef.current) {
-      meshRef.current.rotation.x = state.clock.elapsedTime * 0.3;
-      meshRef.current.rotation.y = state.clock.elapsedTime * 0.2;
-      meshRef.current.position.y = position[1] + Math.sin(state.clock.elapsedTime * 0.5) * 0.3;
-    }
-  });
-
-  return (
-    <Sphere ref={meshRef} position={position} args={[0.6]} scale={1}>
-      <meshStandardMaterial 
-        color="#6366f1" 
-        emissive="#3730a3" 
-        emissiveIntensity={0.1}
-        roughness={0.2}
-        metalness={0.8}
-      />
-    </Sphere>
-  );
-};
-
-const AnimatedBox = ({ position }: { position: [number, number, number] }) => {
+const FloatingOrb = ({ position, color, scale = 1 }: { position: [number, number, number], color: string, scale?: number }) => {
   const meshRef = useRef<THREE.Mesh>(null);
   
   useFrame((state) => {
     if (meshRef.current) {
       meshRef.current.rotation.x = state.clock.elapsedTime * 0.2;
-      meshRef.current.rotation.z = state.clock.elapsedTime * 0.15;
-      meshRef.current.position.x = position[0] + Math.cos(state.clock.elapsedTime * 0.8) * 0.2;
+      meshRef.current.rotation.y = state.clock.elapsedTime * 0.3;
+      meshRef.current.position.y = position[1] + Math.sin(state.clock.elapsedTime * 0.5) * 0.5;
     }
   });
 
   return (
-    <Box ref={meshRef} position={position} args={[0.8, 0.8, 0.8]}>
-      <meshStandardMaterial 
-        color="#ec4899" 
-        emissive="#be185d" 
+    <Float speed={2} rotationIntensity={1} floatIntensity={2}>
+      <Sphere ref={meshRef} position={position} args={[0.8 * scale]} scale={scale}>
+        <MeshDistortMaterial
+          color={color}
+          attach="material"
+          distort={0.3}
+          speed={2}
+          roughness={0.1}
+          metalness={0.8}
+          emissive={color}
+          emissiveIntensity={0.2}
+        />
+      </Sphere>
+    </Float>
+  );
+};
+
+const GeometricShape = ({ position, rotation }: { position: [number, number, number], rotation: [number, number, number] }) => {
+  const meshRef = useRef<THREE.Mesh>(null);
+  
+  useFrame((state) => {
+    if (meshRef.current) {
+      meshRef.current.rotation.x += 0.01;
+      meshRef.current.rotation.y += 0.005;
+      meshRef.current.rotation.z += 0.008;
+    }
+  });
+
+  return (
+    <Box ref={meshRef} position={position} rotation={rotation} args={[1.2, 1.2, 1.2]}>
+      <meshStandardMaterial
+        color="#ff6b6b"
+        metalness={0.9}
+        roughness={0.1}
+        emissive="#ff3030"
         emissiveIntensity={0.1}
-        roughness={0.2}
-        metalness={0.7}
       />
     </Box>
   );
@@ -56,20 +61,26 @@ const AnimatedBox = ({ position }: { position: [number, number, number] }) => {
 const SceneContent = () => {
   return (
     <>
-      <ambientLight intensity={0.3} />
-      <pointLight position={[10, 10, 10]} intensity={0.8} />
-      <pointLight position={[-10, -10, -10]} intensity={0.3} color="#6366f1" />
+      <Environment preset="city" />
+      <ambientLight intensity={0.2} />
+      <pointLight position={[10, 10, 10]} intensity={1} color="#4ade80" />
+      <pointLight position={[-10, -10, -10]} intensity={0.5} color="#3b82f6" />
+      <pointLight position={[0, 10, -10]} intensity={0.8} color="#f59e0b" />
       
-      <AnimatedSphere position={[2, 1, 0]} />
-      <AnimatedBox position={[-2, -1, 1]} />
-      <AnimatedSphere position={[0, 2, -1]} />
+      <FloatingOrb position={[3, 1, 0]} color="#4ade80" scale={1.2} />
+      <FloatingOrb position={[-3, -1, 2]} color="#3b82f6" scale={0.8} />
+      <FloatingOrb position={[0, 2, -2]} color="#f59e0b" scale={1} />
+      <FloatingOrb position={[2, -2, 1]} color="#ef4444" scale={0.9} />
+      
+      <GeometricShape position={[-2, 1, -1]} rotation={[0.5, 0.3, 0.2]} />
+      <GeometricShape position={[1, 3, 1]} rotation={[0.2, 0.8, 0.1]} />
       
       <OrbitControls 
         enableZoom={false} 
         enablePan={false}
         autoRotate
-        autoRotateSpeed={0.3}
-        maxPolarAngle={Math.PI / 1.8}
+        autoRotateSpeed={0.5}
+        maxPolarAngle={Math.PI / 1.6}
         minPolarAngle={Math.PI / 3}
       />
     </>
@@ -77,10 +88,11 @@ const SceneContent = () => {
 };
 
 const LoadingFallback = () => (
-  <div className="absolute inset-0 z-0 bg-gradient-to-br from-indigo-100 via-purple-50 to-pink-100">
+  <div className="absolute inset-0 z-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
     <div className="absolute inset-0 flex items-center justify-center">
       <div className="text-center">
-        <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full mx-auto mb-3 animate-pulse"></div>
+        <div className="w-16 h-16 bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-500 rounded-full mx-auto mb-4 animate-spin"></div>
+        <div className="text-white/70 text-sm">Kraunama...</div>
       </div>
     </div>
   </div>
@@ -91,11 +103,11 @@ export const ThreeScene = () => {
     <div className="absolute inset-0 z-0">
       <Suspense fallback={<LoadingFallback />}>
         <Canvas 
-          camera={{ position: [0, 0, 6], fov: 50 }}
-          dpr={[1, 1.5]}
+          camera={{ position: [0, 0, 8], fov: 45 }}
+          dpr={[1, 2]}
           performance={{ min: 0.5 }}
           gl={{ 
-            antialias: false,
+            antialias: true,
             alpha: true,
             powerPreference: "high-performance"
           }}

@@ -1,63 +1,75 @@
 
-import { ExternalLink, TrendingUp, Eye, Users } from 'lucide-react';
+import { ExternalLink, TrendingUp, Eye, Users, Zap, Award, Target } from 'lucide-react';
 
 const projects = [
   {
-    title: 'Google Ads + Facebook kampanija',
-    description: 'E-komercijos kampanija',
-    result: '+300% pardavimų per 3 mėnesius',
+    title: 'E-Commerce Empire',
+    description: 'Omnichannel kampanija su AI personalizacija',
+    result: '+847% ROI per 6 mėnesius',
     icon: TrendingUp,
-    gradient: 'from-green-500 to-emerald-500'
+    gradient: 'from-emerald-400 via-teal-500 to-cyan-500',
+    stats: ['2.4M reach', '47% konversija', '€890K revenue']
   },
   {
-    title: 'Video gamyba',
-    description: 'Prekės ženklo ir korporatyviniai pristatymai',
-    result: 'Profesionalūs vaizdo sprendimai',
+    title: 'Brand Transformation',
+    description: 'Pilnas rebrand su cinematic video serija',
+    result: '12M organic impressions',
+    icon: Award,
+    gradient: 'from-purple-400 via-pink-500 to-red-500',
+    stats: ['500% engagement', '89% brand recall', '25 awards']
+  },
+  {
+    title: 'Viral Campaign Launch',
+    description: 'Multi-platform virusinė kampanija',
+    result: '45M views per savaitę',
+    icon: Zap,
+    gradient: 'from-yellow-400 via-orange-500 to-red-500',
+    stats: ['#1 trending', '2.8M shares', '340% growth']
+  },
+  {
+    title: 'B2B Lead Generation',
+    description: 'LinkedIn precision targeting su AI automation',
+    result: '2,847 qualified leads',
+    icon: Target,
+    gradient: 'from-blue-400 via-indigo-500 to-purple-500',
+    stats: ['94% lead quality', '67% close rate', '€2.1M pipeline']
+  },
+  {
+    title: 'Interactive Web Experience',
+    description: '3D interaktyvus produktų showcase',
+    result: '384% dwell time increase',
     icon: Eye,
-    gradient: 'from-purple-500 to-pink-500'
+    gradient: 'from-teal-400 via-cyan-500 to-blue-500',
+    stats: ['89% completion', '156% CTR', '4.9/5 rating']
   },
   {
-    title: 'Instagram kampanijos',
-    description: 'Socialinės medijos kampanijos',
-    result: '500 tūkst. peržiūrų per savaitę',
-    icon: Eye,
-    gradient: 'from-pink-500 to-rose-500'
-  },
-  {
-    title: 'Judanti grafika',
-    description: '2D animacija produkto pristatymui',
-    result: 'Unikalūs animacijos sprendimai',
-    icon: Eye,
-    gradient: 'from-blue-500 to-cyan-500'
-  },
-  {
-    title: 'LinkedIn kampanijos',
-    description: 'B2B marketingo sprendimai',
-    result: 'Per 50 kvalifikuotų potencialių klientų',
+    title: 'Influencer Ecosystem',
+    description: 'Makro + mikro influencerių kampanija',
+    result: '23M authentic reach',
     icon: Users,
-    gradient: 'from-indigo-500 to-blue-500'
-  },
-  {
-    title: 'YouTube serijos',
-    description: 'Vaizdo turinio kūrimas',
-    result: 'Per 1 mln. peržiūrų ir aukštas įsitraukimas',
-    icon: Eye,
-    gradient: 'from-red-500 to-orange-500'
+    gradient: 'from-pink-400 via-purple-500 to-indigo-500',
+    stats: ['847 creators', '34% engagement', '€1.8M earned media']
   }
 ];
 
 export const Projects = () => {
   return (
-    <section id="projektai" className="py-20 bg-white">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-              Mūsų projektai
+    <section id="projektai" className="py-32 bg-gradient-to-br from-black via-gray-900 to-slate-900 relative overflow-hidden">
+      {/* Animated background */}
+      <div className="absolute inset-0">
+        <div className="absolute top-1/4 left-0 w-72 h-72 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center mb-20">
+          <h2 className="text-5xl md:text-7xl font-black mb-8">
+            <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
+              SUCCESS STORIES
             </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Sėkmingiausios kampanijos, kurios padėjo klientams pasiekti išskirtinius rezultatus
+          <p className="text-xl text-white/70 max-w-4xl mx-auto">
+            Rezultatai, kurie keičia industrijos standartus ir formuoja ateities sėkmės istorijas
           </p>
         </div>
         
@@ -67,28 +79,43 @@ export const Projects = () => {
             return (
               <div 
                 key={index}
-                className="group bg-gradient-to-br from-gray-50 to-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100 relative overflow-hidden"
+                className="group relative bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-sm rounded-3xl p-8 border border-white/10 hover:border-white/30 transition-all duration-500 hover:-translate-y-6 hover:shadow-2xl hover:shadow-purple-500/20 overflow-hidden"
               >
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-indigo-100 to-purple-100 rounded-full -translate-y-16 translate-x-16 opacity-50"></div>
+                {/* Animated background gradient */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`}></div>
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-white/5 to-transparent rounded-full -translate-y-16 translate-x-16"></div>
                 
-                <div className={`w-16 h-16 bg-gradient-to-r ${project.gradient} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 relative z-10`}>
-                  <Icon size={32} className="text-white" />
+                <div className={`relative w-20 h-20 bg-gradient-to-r ${project.gradient} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300`}>
+                  <Icon size={40} className="text-white" />
                 </div>
                 
-                <h3 className="text-2xl font-bold mb-2 text-gray-800 group-hover:text-indigo-600 transition-colors relative z-10">
+                <h3 className="relative text-2xl font-bold mb-3 text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-cyan-400 group-hover:bg-clip-text transition-all duration-300">
                   {project.title}
                 </h3>
                 
-                <p className="text-gray-600 mb-4 relative z-10">
+                <p className="relative text-white/60 mb-4 text-sm">
                   {project.description}
                 </p>
+
+                {/* Stats */}
+                <div className="relative space-y-2 mb-6">
+                  {project.stats.map((stat, statIndex) => (
+                    <div key={statIndex} className="flex items-center gap-2 text-xs text-white/50">
+                      <div className="w-1 h-1 bg-cyan-400 rounded-full"></div>
+                      {stat}
+                    </div>
+                  ))}
+                </div>
                 
-                <div className="flex items-center justify-between relative z-10">
-                  <span className="text-lg font-semibold text-green-600">
+                <div className="relative flex items-center justify-between">
+                  <span className={`text-lg font-bold bg-gradient-to-r ${project.gradient} bg-clip-text text-transparent`}>
                     {project.result}
                   </span>
-                  <ExternalLink size={20} className="text-gray-400 group-hover:text-indigo-600 transition-colors" />
+                  <ExternalLink size={20} className="text-white/40 group-hover:text-white/80 group-hover:scale-110 transition-all duration-300" />
                 </div>
+                
+                {/* Glow effect */}
+                <div className={`absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r ${project.gradient} blur-xl -z-10`}></div>
               </div>
             );
           })}

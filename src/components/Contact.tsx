@@ -1,4 +1,3 @@
-
 import { Phone, Mail, Clock, MessageCircle, Zap, Rocket, Star, Send, Calendar } from 'lucide-react';
 import { useState } from 'react';
 import { Input } from '@/components/ui/input';
@@ -34,7 +33,13 @@ const contactMethods = [
     icon: MessageCircle,
     title: 'WhatsApp VIP',
     description: 'Momentinis atsakymas su pirmumo palaikymu',
-    action: 'Pradėti pokalbį'
+    action: 'Pradėti pokalbį',
+    onClick: () => {
+      const phoneNumber = '+37544416678';
+      const message = encodeURIComponent('Sveiki! Norėčiau sužinoti daugiau apie jūsų paslaugas ir galimybes.');
+      const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+      window.open(whatsappUrl, '_blank');
+    }
   },
   {
     icon: Calendar,
@@ -154,7 +159,7 @@ export const Contact = () => {
                   {/* Scanning line */}
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-400/30 to-transparent h-1 -translate-y-full group-hover:translate-y-full transition-transform duration-1000"></div>
                   
-                  <div className={`relative w-24 h-24 bg-gradient-to-r ${info.gradient} rounded-3xl flex items-center justify-center mb-8 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 shadow-2xl`}>
+                  <div className={`relative w-24 h-24 bg-gradient-to-r ${info.gradient} rounded-3xl flex items-center justify-center mb-8 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500`}>
                     <Icon size={48} className="text-white" />
                   </div>
                   
@@ -206,7 +211,10 @@ export const Contact = () => {
                     {method.description}
                   </p>
                   
-                  <button className="relative w-full bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 text-white font-bold py-4 rounded-2xl hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 hover:scale-105 overflow-hidden group">
+                  <button 
+                    onClick={method.onClick}
+                    className="relative w-full bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 text-white font-bold py-4 rounded-2xl hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 hover:scale-105 overflow-hidden group"
+                  >
                     <div className="absolute inset-0 bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     <span className="relative flex items-center justify-center gap-2">
                       {method.action}

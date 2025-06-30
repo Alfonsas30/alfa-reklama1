@@ -1,3 +1,4 @@
+
 import { Zap, Heart, Mail, Phone, Send, Facebook, Instagram } from 'lucide-react';
 
 const socialLinks = [
@@ -135,14 +136,6 @@ export const Footer = () => {
             <div className="text-white/40 text-sm text-center">
               Visos teisės saugomos • Premium skaitmeninio marketingo sprendimai
             </div>
-          </div>
-
-          {/* Additional Info */}
-          <div className="mt-8 text-center">
-            <p className="text-white/30 text-xs leading-relaxed max-w-2xl mx-auto">
-              Alfa Reklama yra registruota prekės ženklo pavadinimas. 
-              Mes esame sertifikuoti Google, Facebook ir LinkedIn partneriai.
-            </p>
           </div>
         </div>
       </div>

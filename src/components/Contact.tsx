@@ -10,17 +10,10 @@ const contactInfo = [
   },
   {
     icon: Mail,
-    title: 'Pagrindinės el. paštas',
-    content: 'info@alfareklama.ch',
-    description: 'Tiesioginė linija į komandą',
+    title: 'El. pašto kontaktai',
+    content: 'info@alfareklama.ch\ngmbhinvest333@gmail.com',
+    description: 'Verslo ir bendrieji užklausimai',
     gradient: 'from-blue-400 to-cyan-500'
-  },
-  {
-    icon: Mail,
-    title: 'Verslo el. paštas',
-    content: 'gmbhinvest333@gmail.com',
-    description: 'Verslo užklausoms',
-    gradient: 'from-purple-400 to-pink-500'
   },
   {
     icon: Clock,
@@ -88,8 +81,8 @@ export const Contact = () => {
             </p>
           </div>
           
-          {/* Contact Info Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-24">
+          {/* Contact Info Grid - now 3 blocks instead of 4 */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-24">
             {contactInfo.map((info, index) => {
               const Icon = info.icon;
               return (
@@ -110,9 +103,13 @@ export const Contact = () => {
                     {info.title}
                   </h3>
                   
-                  <p className="relative text-white/95 font-bold mb-3 text-xs sm:text-sm md:text-base email-break">
-                    {info.content}
-                  </p>
+                  <div className="relative text-white/95 font-bold mb-3 text-xs sm:text-sm md:text-base email-break">
+                    {info.content.split('\n').map((line, lineIndex) => (
+                      <div key={lineIndex} className="mb-1">
+                        {line}
+                      </div>
+                    ))}
+                  </div>
 
                   <p className="relative text-white/60 text-sm font-medium">
                     {info.description}

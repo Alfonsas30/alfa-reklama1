@@ -1,4 +1,3 @@
-
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Sphere, Box, Octahedron, Cone, Torus, MeshDistortMaterial, Float, Environment, Stars } from '@react-three/drei';
 import { useRef, useMemo } from 'react';
@@ -47,11 +46,36 @@ const GeometricShape = ({ position, rotation, shapeType = 'box' }: { position: [
     }
   });
 
-  const ShapeComponent = shapeType === 'octahedron' ? Octahedron : shapeType === 'cone' ? Cone : Box;
-  const shapeArgs = shapeType === 'octahedron' ? [1] : shapeType === 'cone' ? [0.8, 1.5, 8] : [1, 1, 1];
+  if (shapeType === 'octahedron') {
+    return (
+      <Octahedron ref={meshRef} position={position} rotation={rotation} args={[1]}>
+        <meshStandardMaterial
+          color="#ff6b6b"
+          metalness={0.9}
+          roughness={0.1}
+          emissive="#ff3030"
+          emissiveIntensity={0.2}
+        />
+      </Octahedron>
+    );
+  }
+
+  if (shapeType === 'cone') {
+    return (
+      <Cone ref={meshRef} position={position} rotation={rotation} args={[0.8, 1.5, 8]}>
+        <meshStandardMaterial
+          color="#ff6b6b"
+          metalness={0.9}
+          roughness={0.1}
+          emissive="#ff3030"
+          emissiveIntensity={0.2}
+        />
+      </Cone>
+    );
+  }
 
   return (
-    <ShapeComponent ref={meshRef} position={position} rotation={rotation} args={shapeArgs}>
+    <Box ref={meshRef} position={position} rotation={rotation} args={[1, 1, 1]}>
       <meshStandardMaterial
         color="#ff6b6b"
         metalness={0.9}
@@ -59,7 +83,7 @@ const GeometricShape = ({ position, rotation, shapeType = 'box' }: { position: [
         emissive="#ff3030"
         emissiveIntensity={0.2}
       />
-    </ShapeComponent>
+    </Box>
   );
 };
 

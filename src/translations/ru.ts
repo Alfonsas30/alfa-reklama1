@@ -95,11 +95,86 @@ export const ru = {
   aboutTitle2: 'ФИЛОСОФИЯ',
   aboutDescription: 'Мы не просто агентство – мы катализатор трансформации, который меняет будущие траектории бизнеса',
   
+  // About features
+  aboutFeature1Title: 'Пионеры AI технологий',
+  aboutFeature1Description: 'Решения искусственного интеллекта для оптимального результата',
+  aboutFeature2Title: '15+ лет лидерства',
+  aboutFeature2Description: 'Лидеры рынка в сфере цифрового маркетинга',
+  aboutFeature3Title: 'Премиум исполнение',
+  aboutFeature3Description: 'Решения высочайшего качества для люксового сегмента',
+  aboutFeature4Title: 'Глобальная сеть',
+  aboutFeature4Description: 'Эксперты международных кампаний в 47 странах',
+  
+  // About achievements
+  aboutAchievement1: '500M+',
+  aboutAchievement1Label: 'Общий охват',
+  aboutAchievement2: '2 847%',
+  aboutAchievement2Label: 'Средняя ROI',
+  aboutAchievement3: '89',
+  aboutAchievement3Label: 'Отраслевых наград',
+  aboutAchievement4: '99,2%',
+  aboutAchievement4Label: 'Удержание клиентов',
+  
+  // About extended content
+  aboutExtendedTitle: 'Революционные решения для будущего бизнеса',
+  aboutExtendedDescription1: 'Наша миссия – трансформировать каждого клиента в революционного лидера в своей области. Используя самые передовые AI технологии, инсайты нейромаркетинга и решения аналитики больших данных, мы создаем кампании, которые не только достигают целей, но и устанавливают новые отраслевые стандарты.',
+  aboutExtendedDescription2: 'Каждый проект – это уникальное произведение искусства, рожденное из симбиоза стратегического мышления, творческого гения и технологических инноваций.',
+  aboutVisionTitle: 'Наше видение 2030',
+  aboutVisionDescription: 'Стать глобальным лидером в решениях маркетинга AI технологий, формируя стандарты коммуникаций будущего и изменяя то, как бренды взаимодействуют с аудиторией.',
+  aboutVisionGuarantee: 'Мы гарантируем результаты',
+  
   // Contact
   contactLabel: 'ПРЕМИУМ КОНСУЛЬТАЦИИ ДОСТУПНЫ',
   contactTitle1: 'СВЯЖИТЕСЬ',
   contactTitle2: 'С НАШЕЙ КОМАНДОЙ',
   contactDescription: 'Готовы трансформировать свой бизнес? Свяжитесь с нашей командой премиум-экспертов и начните путь к непревзойденному успеху.',
+  
+  // Contact Info
+  contactInfo1Title: 'Премиум линия',
+  contactInfo1Content: '+375 44 416 66 78',
+  contactInfo1Description: '24/7 VIP поддержка',
+  contactInfo2Title: 'Email контакты',
+  contactInfo2Content: 'info@alfareklama.ch\ngmbhinvest333@gmail.com',
+  contactInfo2Description: 'Бизнес и общие запросы',
+  contactInfo3Title: 'Элитное рабочее время',
+  contactInfo3Content: 'Пн–Пт, 9:00–16:00',
+  contactInfo3Description: 'Дополнительные функции 24/7',
+  
+  // Contact Methods
+  contactMethod1Title: 'WhatsApp VIP',
+  contactMethod1Description: 'Мгновенный ответ с приоритетной поддержкой',
+  contactMethod1Action: 'Начать разговор',
+  contactMethod2Title: 'Стратегический звонок',
+  contactMethod2Description: 'Бесплатная 30-минутная консультация с командой экспертов',
+  contactMethod2Action: 'Забронировать время',
+  contactMethod3Title: 'Запуск проекта',
+  contactMethod3Description: 'Быстрый старт проекта в течение 48 часов',
+  contactMethod3Action: 'Начать сейчас',
+  
+  // Contact Form
+  contactFormTitle: 'Связаться с нами',
+  contactFormDescription: 'Оставьте свои контакты и мы свяжемся с вами в течение 24 часов',
+  contactFormNameLabel: 'Имя *',
+  contactFormNamePlaceholder: 'Ваше имя',
+  contactFormEmailLabel: 'Email *',
+  contactFormEmailPlaceholder: 'ваш@email.com',
+  contactFormMessageLabel: 'Сообщение *',
+  contactFormMessagePlaceholder: 'Напишите ваше сообщение...',
+  contactFormSubmit: 'Отправить сообщение',
+  contactFormSubmitting: 'Отправляем...',
+  contactFormSuccessTitle: 'Спасибо за ваше сообщение!',
+  contactFormSuccessDescription: 'Мы свяжемся с вами в ближайшее время.',
+  
+  // Contact CTA
+  contactCtaTitle: 'Готовы творить историю?',
+  contactCtaDescription: 'Ваша история успеха начинается здесь. Свяжитесь с нами сейчас и получите персонализированную стратегию, которая трансформирует ваш бизнес в лидера будущего.',
+  contactCtaButtonStart: 'Начать сейчас',
+  contactCtaButtonProjects: 'Проекты',
+  
+  // Contact Methods WhatsApp messages
+  whatsappMessage1: 'Привет! Я хотел бы узнать больше о ваших услугах и возможностях.',
+  whatsappMessage2: 'Привет! Я хотел бы забронировать бесплатную 30-минутную стратегическую консультацию с вашей командой экспертов.',
+  whatsappMessage3: 'Привет! Я хочу начать новый проект и интересуюсь быстрым стартом в течение 48 часов. Можем ли мы обсудить детали?',
   
   // Footer
   quickLinks: 'Быстрые ссылки',

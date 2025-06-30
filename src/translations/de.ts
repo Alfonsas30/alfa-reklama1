@@ -95,11 +95,86 @@ export const de = {
   aboutTitle2: 'PHILOSOPHIE',
   aboutDescription: 'Wir sind nicht nur eine Agentur – wir sind ein Transformationskatalysator, der zukünftige Geschäftsentwicklungen verändert',
   
+  // About features
+  aboutFeature1Title: 'AI-Technologie-Pioniere',
+  aboutFeature1Description: 'Künstliche Intelligenz-Lösungen für optimale Ergebnisse',
+  aboutFeature2Title: '15+ Jahre Führung',
+  aboutFeature2Description: 'Marktführer in der digitalen Marketing-Branche',
+  aboutFeature3Title: 'Premium-Ausführung',
+  aboutFeature3Description: 'Höchste Qualitätslösungen für das Luxussegment',
+  aboutFeature4Title: 'Globales Netzwerk',
+  aboutFeature4Description: 'Internationale Kampagnenexperten in 47 Ländern',
+  
+  // About achievements
+  aboutAchievement1: '500M+',
+  aboutAchievement1Label: 'Gesamtreichweite',
+  aboutAchievement2: '2.847%',
+  aboutAchievement2Label: 'Durchschnittliche Rendite',
+  aboutAchievement3: '89',
+  aboutAchievement3Label: 'Branchenauszeichnungen',
+  aboutAchievement4: '99,2%',
+  aboutAchievement4Label: 'Kundenbindung',
+  
+  // About extended content
+  aboutExtendedTitle: 'Revolutionäre Lösungen für zukünftige Unternehmen',
+  aboutExtendedDescription1: 'Unsere Mission ist es, jeden Kunden zu einem revolutionären Marktführer in seinem Bereich zu transformieren. Mit den fortschrittlichsten AI-Technologien, Neuromarketing-Erkenntnissen und Big-Data-Analytiklösungen erstellen wir Kampagnen, die nicht nur Ziele erreichen, sondern auch neue Branchenstandards setzen.',
+  aboutExtendedDescription2: 'Jedes Projekt ist ein einzigartiges Kunstwerk, geboren aus der Symbiose von strategischem Denken, kreativem Genie und technologischer Innovation.',
+  aboutVisionTitle: 'Unsere Vision 2030',
+  aboutVisionDescription: 'Globaler Marktführer in AI-Technologie-Marketing-Lösungen zu werden, zukünftige Kommunikationsstandards zu prägen und zu verändern, wie Marken mit Zielgruppen interagieren.',
+  aboutVisionGuarantee: 'Wir garantieren Ergebnisse',
+  
   // Contact
   contactLabel: 'PREMIUM BERATUNGEN VERFÜGBAR',
   contactTitle1: 'KONTAKTIEREN SIE',
   contactTitle2: 'UNSER TEAM',
   contactDescription: 'Bereit, Ihr Unternehmen zu transformieren? Kontaktieren Sie unser Premium-Expertenteam und beginnen Sie Ihre Reise zu unvergleichlichem Erfolg.',
+  
+  // Contact Info
+  contactInfo1Title: 'Premium-Linie',
+  contactInfo1Content: '+375 44 416 66 78',
+  contactInfo1Description: '24/7 VIP-Support',
+  contactInfo2Title: 'E-Mail-Kontakte',
+  contactInfo2Content: 'info@alfareklama.ch\ngmbhinvest333@gmail.com',
+  contactInfo2Description: 'Geschäfts- und allgemeine Anfragen',
+  contactInfo3Title: 'Elite-Arbeitszeiten',
+  contactInfo3Content: 'Mo–Fr, 9:00–16:00',
+  contactInfo3Description: 'Zusätzliche Funktionen 24/7',
+  
+  // Contact Methods
+  contactMethod1Title: 'WhatsApp VIP',
+  contactMethod1Description: 'Sofortige Antwort mit prioritärem Support',
+  contactMethod1Action: 'Gespräch starten',
+  contactMethod2Title: 'Strategiegespräch',
+  contactMethod2Description: 'Kostenlose 30-minütige Beratung mit Expertenteam',
+  contactMethod2Action: 'Zeit buchen',
+  contactMethod3Title: 'Projektstart',
+  contactMethod3Description: 'Schneller Projektstart innerhalb von 48 Stunden',
+  contactMethod3Action: 'Jetzt starten',
+  
+  // Contact Form
+  contactFormTitle: 'Kontakt aufnehmen',
+  contactFormDescription: 'Hinterlassen Sie Ihre Kontaktdaten und wir melden uns innerhalb von 24 Stunden bei Ihnen',
+  contactFormNameLabel: 'Name *',
+  contactFormNamePlaceholder: 'Ihr Name',
+  contactFormEmailLabel: 'E-Mail *',
+  contactFormEmailPlaceholder: 'ihre@email.com',
+  contactFormMessageLabel: 'Nachricht *',
+  contactFormMessagePlaceholder: 'Schreiben Sie Ihre Nachricht...',
+  contactFormSubmit: 'Nachricht senden',
+  contactFormSubmitting: 'Wird gesendet...',
+  contactFormSuccessTitle: 'Vielen Dank für Ihre Nachricht!',
+  contactFormSuccessDescription: 'Wir werden uns bald bei Ihnen melden.',
+  
+  // Contact CTA
+  contactCtaTitle: 'Bereit, Geschichte zu schreiben?',
+  contactCtaDescription: 'Ihre Erfolgsgeschichte beginnt hier. Kontaktieren Sie uns jetzt und erhalten Sie eine personalisierte Strategie, die Ihr Unternehmen zu einem zukünftigen Marktführer transformiert.',
+  contactCtaButtonStart: 'Jetzt starten',
+  contactCtaButtonProjects: 'Projekte',
+  
+  // Contact Methods WhatsApp messages
+  whatsappMessage1: 'Hallo! Ich möchte mehr über Ihre Dienstleistungen und Möglichkeiten erfahren.',
+  whatsappMessage2: 'Hallo! Ich möchte eine kostenlose 30-minütige Strategieberatung mit Ihrem Expertenteam buchen.',
+  whatsappMessage3: 'Hallo! Ich möchte ein neues Projekt starten und interessiere mich für einen schnellen Start innerhalb von 48 Stunden. Können wir die Details besprechen?',
   
   // Footer
   quickLinks: 'Schnelllinks',

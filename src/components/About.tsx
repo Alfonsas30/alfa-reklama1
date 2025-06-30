@@ -1,73 +1,86 @@
 
-import { Award, Users, Target, Zap, Rocket, Globe, Brain, Diamond } from 'lucide-react';
+import { Award, Users, Target, Zap, Rocket, Globe, Brain, Diamond, Star, Shield } from 'lucide-react';
 
 const features = [
   {
     icon: Brain,
-    title: 'AI-Powered Insights',
-    description: 'Dirbtinio intelekto sprendimai optimaliems rezultatams'
+    title: 'AI technologijų pionieriai',
+    description: 'Dirbtinio intelekto sprendimai optimaliam rezultatui'
   },
   {
     icon: Rocket,
-    title: '15+ Metų Dominuojame',
+    title: '15+ metų lyderystė',
     description: 'Rinkos lyderiai skaitmeninio marketingo srityje'
   },
   {
     icon: Diamond,
-    title: 'Premium Execution',
-    description: 'Aukščiausios kokybės sprendimai luxury segmentui'
+    title: 'Premium vykdymas',
+    description: 'Aukščiausios kokybės sprendimai prabangos segmentui'
   },
   {
     icon: Globe,
-    title: 'Global Network',
+    title: 'Globalus tinklas',
     description: 'Tarptautinių kampanijų ekspertai 47 šalyse'
   }
 ];
 
 const achievements = [
-  { number: '500M+', label: 'Total Reach' },
-  { number: '2,847%', label: 'Avg ROI' },
-  { number: '89', label: 'Industry Awards' },
-  { number: '99.2%', label: 'Client Retention' }
+  { number: '500M+', label: 'Bendras pasiekimas' },
+  { number: '2 847%', label: 'Vidutinė investicijų grąža' },
+  { number: '89', label: 'Pramonės apdovanojimai' },
+  { number: '99,2%', label: 'Klientų išlaikymas' }
 ];
 
 export const About = () => {
   return (
-    <section id="apie" className="py-32 bg-gradient-to-br from-slate-900 via-purple-900 to-black relative overflow-hidden">
-      {/* Background effects */}
+    <section id="apie" className="py-32 bg-gradient-to-br from-black via-slate-900/50 to-purple-900/30 relative overflow-hidden">
+      {/* Advanced background effects */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/3 w-96 h-96 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-gradient-to-r from-pink-500/10 to-orange-500/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
+        <div className="absolute top-0 left-1/3 w-96 h-96 bg-gradient-to-r from-cyan-500/15 to-purple-500/15 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-0 right-1/3 w-96 h-96 bg-gradient-to-r from-pink-500/15 to-orange-500/15 rounded-full blur-3xl animate-pulse delay-2000"></div>
+        <div className="absolute top-1/2 left-0 w-64 h-64 bg-gradient-to-r from-green-400/10 to-emerald-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
+      {/* Cyber grid */}
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.02)_1px,transparent_1px)] bg-[size:100px_100px]"></div>
+
+      <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-20">
-            <h2 className="text-5xl md:text-7xl font-black mb-8">
-              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                ALFA DNA
+          <div className="text-center mb-24">
+            <div className="inline-flex items-center gap-3 px-8 py-4 bg-black/40 backdrop-blur-xl border border-cyan-400/30 rounded-full text-cyan-400 font-bold mb-12 animate-pulse">
+              <Star size={20} />
+              MŪSŲ DNR
+            </div>
+
+            <h2 className="text-6xl md:text-8xl font-black mb-12 leading-tight">
+              <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse">
+                ALFA
+              </span>
+              <br />
+              <span className="bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent animate-pulse">
+                FILOSOFIJA
               </span>
             </h2>
-            <p className="text-xl text-white/70 max-w-4xl mx-auto">
+            <p className="text-2xl text-white/80 max-w-5xl mx-auto leading-relaxed">
               Mes nesame tiesiog agentūra – mes esame transformacijos katalizatorius, 
               kuris keičia verslo ateities trajektorijas
             </p>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
-            <div className="space-y-8">
-              <div className="space-y-6">
-                <h3 className="text-3xl font-bold text-white mb-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center mb-24">
+            <div className="space-y-10">
+              <div className="space-y-8">
+                <h3 className="text-4xl font-black text-white mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                   Revoliuciniai sprendimai ateities verslui
                 </h3>
-                <p className="text-lg text-white/80 leading-relaxed">
+                <p className="text-xl text-white/90 leading-relaxed">
                   Mūsų misija – transformuoti kiekvieną klientą į savo srities revoliucionierių. 
-                  Naudodami pažangiausias AI technologijas, neuromarketing insights ir 
-                  big data analytics, kuriame kampanijas, kurios ne tik pasiekia tikslus, 
-                  bet ir formuoja naują industrijos standartą.
+                  Naudodami pažangiausias AI technologijas, neuromarketingo įžvalgas ir 
+                  didelių duomenų analitikos sprendimus, kuriame kampanijas, kurios ne tik pasiekia tikslus, 
+                  bet ir formuoja naują pramonės standartą.
                 </p>
                 
-                <p className="text-lg text-white/80 leading-relaxed">
+                <p className="text-xl text-white/90 leading-relaxed">
                   Kiekvienas projektas – tai unikalus meno kūrinys, gimstantis iš strateginio 
                   mąstymo, kūrybinio genijaus ir technologinių inovacijų simbiozės.
                 </p>
@@ -75,31 +88,36 @@ export const About = () => {
             </div>
             
             <div className="relative">
-              <div className="relative bg-gradient-to-br from-cyan-500/20 via-purple-500/20 to-pink-500/20 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
-                <h3 className="text-3xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              <div className="relative bg-gradient-to-br from-cyan-500/20 via-purple-500/20 to-pink-500/20 backdrop-blur-xl rounded-3xl p-12 border border-cyan-400/30 hover:border-cyan-400/50 transition-all duration-500 hover:scale-105">
+                <h3 className="text-4xl font-black mb-8 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                   Mūsų vizija 2030
                 </h3>
-                <p className="text-lg text-white/90 leading-relaxed">
-                  Tapti globaliu lyderiu AI-powered marketingo sprendimuose, 
+                <p className="text-xl text-white/90 leading-relaxed mb-8">
+                  Tapti globaliu lyderiu AI technologijų marketingo sprendimuose, 
                   formuojančiu ateities komunikacijos standartus ir keičiančiu 
                   tai, kaip prekės ženklai sąveikauja su auditorija.
                 </p>
                 
+                <div className="flex items-center gap-4">
+                  <Shield size={32} className="text-cyan-400" />
+                  <span className="text-lg font-bold text-white/90">Garantuojame rezultatus</span>
+                </div>
+                
                 {/* Floating elements */}
-                <div className="absolute -top-6 -right-6 w-24 h-24 bg-gradient-to-r from-pink-400/30 to-purple-500/30 rounded-full blur-xl"></div>
-                <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-gradient-to-r from-cyan-400/30 to-blue-500/30 rounded-full blur-xl"></div>
+                <div className="absolute -top-6 -right-6 w-24 h-24 bg-gradient-to-r from-pink-400/30 to-purple-500/30 rounded-full blur-xl animate-pulse"></div>
+                <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-gradient-to-r from-cyan-400/30 to-blue-500/30 rounded-full blur-xl animate-pulse delay-1000"></div>
               </div>
             </div>
           </div>
 
           {/* Achievement Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-20">
             {achievements.map((achievement, index) => (
               <div key={index} className="text-center group">
-                <div className="text-4xl md:text-5xl font-black bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300">
+                <div className="text-5xl md:text-6xl font-black bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-3 group-hover:scale-110 transition-transform duration-300 animate-pulse">
                   {achievement.number}
                 </div>
-                <div className="text-white/60 text-sm font-medium uppercase tracking-wider">
+                <div className="text-white/70 text-sm font-bold uppercase tracking-wider">
                   {achievement.label}
                 </div>
               </div>
@@ -107,26 +125,29 @@ export const About = () => {
           </div>
           
           {/* Features Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
             {features.map((feature, index) => {
               const Icon = feature.icon;
               return (
                 <div 
                   key={index}
-                  className="group text-center relative"
+                  className="group text-center relative hover:scale-105 transition-all duration-500"
                 >
-                  <div className="relative w-24 h-24 bg-gradient-to-br from-cyan-500/20 via-purple-500/20 to-pink-500/20 backdrop-blur-sm rounded-3xl flex items-center justify-center mx-auto mb-6 border border-white/10 group-hover:border-white/30 group-hover:scale-110 transition-all duration-300">
-                    <Icon size={48} className="text-white group-hover:text-cyan-400 transition-colors duration-300" />
+                  <div className="relative w-28 h-28 bg-gradient-to-br from-cyan-500/20 via-purple-500/20 to-pink-500/20 backdrop-blur-xl rounded-3xl flex items-center justify-center mx-auto mb-8 border border-cyan-400/20 group-hover:border-cyan-400/50 group-hover:scale-110 transition-all duration-500 overflow-hidden">
+                    <Icon size={56} className="text-white group-hover:text-cyan-400 transition-colors duration-300 relative z-10" />
                     
                     {/* Glow effect */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-300"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/30 to-purple-500/30 rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500"></div>
+                    
+                    {/* Scanning line */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-400/40 to-transparent h-0.5 -translate-y-full group-hover:translate-y-full transition-transform duration-1000"></div>
                   </div>
                   
-                  <h3 className="text-xl font-bold mb-3 text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-purple-400 group-hover:bg-clip-text transition-all duration-300">
+                  <h3 className="text-2xl font-black mb-4 text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-purple-400 group-hover:bg-clip-text transition-all duration-300">
                     {feature.title}
                   </h3>
                   
-                  <p className="text-white/70 group-hover:text-white/90 transition-colors duration-300">
+                  <p className="text-white/80 text-lg leading-relaxed group-hover:text-white/95 transition-colors duration-300">
                     {feature.description}
                   </p>
                 </div>

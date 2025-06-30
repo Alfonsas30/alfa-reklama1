@@ -1,38 +1,147 @@
 
-import { Zap, Heart } from 'lucide-react';
+import { Zap, Heart, Mail, Phone, MapPin, Linkedin, Facebook, Instagram } from 'lucide-react';
+
+const socialLinks = [
+  { icon: Linkedin, href: '#', label: 'LinkedIn' },
+  { icon: Facebook, href: '#', label: 'Facebook' },
+  { icon: Instagram, href: '#', label: 'Instagram' }
+];
+
+const quickLinks = [
+  { label: 'Paslaugos', href: '#paslaugos' },
+  { label: 'Projektai', href: '#projektai' },
+  { label: 'Apie mus', href: '#apie' },
+  { label: 'Kontaktai', href: '#kontaktai' }
+];
 
 export const Footer = () => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId.replace('#', ''));
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <footer className="bg-gradient-to-br from-black via-gray-900 to-slate-900 text-white py-16 relative overflow-hidden">
+    <footer className="bg-gradient-to-br from-black via-gray-900/80 to-slate-900 text-white py-24 relative overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0">
-        <div className="absolute bottom-0 left-1/4 w-64 h-64 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute top-0 right-1/4 w-48 h-48 bg-gradient-to-r from-pink-500/10 to-purple-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/15 to-purple-500/15 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute top-0 right-1/4 w-72 h-72 bg-gradient-to-r from-pink-500/15 to-purple-500/15 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center">
-          <div className="flex items-center justify-center gap-3 mb-6">
-            <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-xl flex items-center justify-center">
-              <Zap size={28} className="text-white" />
+      {/* Grid pattern */}
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.02)_1px,transparent_1px)] bg-[size:100px_100px]"></div>
+
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+          {/* Company Info */}
+          <div className="md:col-span-2 space-y-8">
+            <div className="flex items-center gap-4">
+              <div className="relative w-16 h-16 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-2xl flex items-center justify-center animate-pulse">
+                <Zap size={32} className="text-white" />
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-2xl blur-xl opacity-60"></div>
+              </div>
+              <div className="text-4xl font-black bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                ALFA REKLAMA
+              </div>
             </div>
-            <div className="text-3xl font-black bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-              ALFA REKLAMA
+            
+            <p className="text-white/80 text-lg leading-relaxed max-w-md">
+              Transformuojame verslo ateities trajektorijas per inovatyvius 
+              skaitmeninio marketingo sprendimus ir AI technologijas.
+            </p>
+
+            {/* Contact Info */}
+            <div className="space-y-4">
+              <div className="flex items-center gap-4 text-white/70 hover:text-white transition-colors">
+                <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center">
+                  <Mail size={20} className="text-white" />
+                </div>
+                <span className="font-medium">hello@alfareklama.ch</span>
+              </div>
+              
+              <div className="flex items-center gap-4 text-white/70 hover:text-white transition-colors">
+                <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
+                  <Phone size={20} className="text-white" />
+                </div>
+                <span className="font-medium">+375 44 416 66 78</span>
+              </div>
+              
+              <div className="flex items-center gap-4 text-white/70 hover:text-white transition-colors">
+                <div className="w-10 h-10 bg-gradient-to-r from-pink-500 to-cyan-500 rounded-lg flex items-center justify-center">
+                  <MapPin size={20} className="text-white" />
+                </div>
+                <span className="font-medium">Šveicarija, Ciurichas</span>
+              </div>
             </div>
           </div>
-          
-          <p className="text-white/60 mb-8 max-w-2xl mx-auto">
-            Transformuojame verslo ateities trajektorijas per inovatyvius skaitmeninio marketingo sprendimus
-          </p>
 
-          <div className="flex items-center justify-center gap-2 text-white/40 text-sm">
-            <span>© 2025 Alfa Reklama. Sukurta su</span>
-            <Heart size={16} className="text-red-400 fill-current" />
-            <span>Šveicarijoje</span>
+          {/* Quick Links */}
+          <div>
+            <h4 className="text-2xl font-black mb-8 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              Greitos nuorodos
+            </h4>
+            <div className="space-y-4">
+              {quickLinks.map((link, index) => (
+                <button
+                  key={index}
+                  onClick={() => scrollToSection(link.href)}
+                  className="block text-white/70 hover:text-white transition-colors font-medium text-left hover:text-transparent hover:bg-gradient-to-r hover:from-cyan-400 hover:to-purple-400 hover:bg-clip-text"
+                >
+                  {link.label}
+                </button>
+              ))}
+            </div>
           </div>
 
-          <div className="mt-4 text-white/30 text-xs">
-            Visos teisės saugomos • Premium Digital Marketing Solutions
+          {/* Social Links */}
+          <div>
+            <h4 className="text-2xl font-black mb-8 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+              Socialiniai tinklai
+            </h4>
+            <div className="flex flex-col gap-4">
+              {socialLinks.map((social, index) => {
+                const Icon = social.icon;
+                return (
+                  <a
+                    key={index}
+                    href={social.href}
+                    className="flex items-center gap-4 text-white/70 hover:text-white transition-all duration-300 group"
+                  >
+                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
+                      <Icon size={24} className="text-white" />
+                    </div>
+                    <span className="font-medium group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-purple-400 group-hover:bg-clip-text transition-all duration-300">
+                      {social.label}
+                    </span>
+                  </a>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom Section */}
+        <div className="border-t border-white/10 pt-12">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+            <div className="flex items-center gap-3 text-white/60 text-sm">
+              <span>© 2025 Alfa Reklama. Sukurta su</span>
+              <Heart size={16} className="text-red-400 fill-current animate-pulse" />
+              <span>Šveicarijoje</span>
+            </div>
+
+            <div className="text-white/40 text-sm text-center">
+              Visos teisės saugomos • Premium skaitmeninio marketingo sprendimai
+            </div>
+          </div>
+
+          {/* Additional Info */}
+          <div className="mt-8 text-center">
+            <p className="text-white/30 text-xs leading-relaxed max-w-2xl mx-auto">
+              Alfa Reklama yra registruota prekės ženklo pavadinimas. 
+              Mes esame sertifikuoti Google, Facebook ir LinkedIn partneriai.
+            </p>
           </div>
         </div>
       </div>

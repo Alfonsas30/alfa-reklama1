@@ -1,3 +1,4 @@
+
 import { Phone, Mail, Clock, MessageCircle, Zap, Rocket, Star, Send, Calendar } from 'lucide-react';
 
 const contactInfo = [
@@ -25,7 +26,7 @@ const contactInfo = [
   {
     icon: Clock,
     title: 'Elito darbo laikas',
-    content: 'Pr–Pn, 9:00–20:00',
+    content: 'Pr–Pn, 9:00–16:00',
     description: 'Papildomos funkcijos 24/7',
     gradient: 'from-orange-400 to-red-500'
   }

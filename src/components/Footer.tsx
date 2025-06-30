@@ -1,12 +1,9 @@
-
-
-
 import { Zap, Heart, Mail, Phone, Linkedin, Facebook, Instagram } from 'lucide-react';
 
 const socialLinks = [
   { icon: Linkedin, href: '#', label: 'LinkedIn' },
   { icon: Facebook, href: '#', label: 'Facebook' },
-  { icon: Instagram, href: '#', label: 'Instagram' }
+  { icon: Instagram, href: 'https://www.instagram.com/norvaisasalfonsa/', label: 'Instagram' }
 ];
 
 const quickLinks = [
@@ -109,6 +106,8 @@ export const Footer = () => {
                   <a
                     key={index}
                     href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex items-center gap-4 text-white/70 hover:text-white transition-all duration-300 group"
                   >
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
@@ -150,5 +149,3 @@ export const Footer = () => {
     </footer>
   );
 };
-
-

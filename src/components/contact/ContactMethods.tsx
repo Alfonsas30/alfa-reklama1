@@ -30,7 +30,13 @@ const contactMethods = [
     icon: Rocket,
     title: 'Projekto pradžia',
     description: 'Greitas projekto startas per 48 valandas',
-    action: 'Pradėti dabar'
+    action: 'Pradėti dabar',
+    onClick: () => {
+      const phoneNumber = '+37544416678';
+      const message = encodeURIComponent('Sveiki! Noriu pradėti naują projektą ir domina greitas startas per 48 valandas. Galime aptarti detales?');
+      const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+      window.open(whatsappUrl, '_blank');
+    }
   }
 ];
 

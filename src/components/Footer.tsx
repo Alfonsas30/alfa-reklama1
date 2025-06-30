@@ -1,8 +1,9 @@
+
 import { Zap, Heart, Mail, Phone, Linkedin, Facebook, Instagram } from 'lucide-react';
 
 const socialLinks = [
   { icon: Linkedin, href: '#', label: 'LinkedIn' },
-  { icon: Facebook, href: '#', label: 'Facebook' },
+  { icon: Facebook, href: 'https://www.facebook.com/profile.php?id=61578020543147', label: 'Facebook' },
   { icon: Instagram, href: 'https://www.instagram.com/norvaisasalfonsa/', label: 'Instagram' }
 ];
 

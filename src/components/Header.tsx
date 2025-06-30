@@ -1,8 +1,14 @@
+
 import { useState } from 'react';
 import { Menu, X, Zap } from 'lucide-react';
+import { LanguageSelector } from './LanguageSelector';
+import { useLanguage } from '../contexts/LanguageContext';
+import { getTranslation } from '../translations';
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { language } = useLanguage();
+  const t = getTranslation(language);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -32,30 +38,33 @@ export const Header = () => {
               onClick={() => scrollToSection('paslaugos')}
               className="relative text-white/90 hover:text-white transition-all duration-300 font-semibold group"
             >
-              Paslaugos
+              {t.services}
               <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></div>
             </button>
             <button 
               onClick={() => scrollToSection('projektai')}
               className="relative text-white/90 hover:text-white transition-all duration-300 font-semibold group"
             >
-              Projektai
+              {t.projects}
               <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></div>
             </button>
             <button 
               onClick={() => scrollToSection('apie')}
               className="relative text-white/90 hover:text-white transition-all duration-300 font-semibold group"
             >
-              Apie mus
+              {t.about}
               <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></div>
             </button>
+            
+            <LanguageSelector />
+            
             <button 
               onClick={() => scrollToSection('kontaktai')}
               className="relative bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 text-white px-8 py-3 rounded-full font-bold hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 hover:scale-105 overflow-hidden group animate-gradient-slide"
               style={{ backgroundSize: '200% 200%' }}
             >
               <div className="absolute inset-0 bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" style={{ backgroundSize: '200% 200%' }}></div>
-              <span className="relative">Kontaktai</span>
+              <span className="relative">{t.contact}</span>
             </button>
           </nav>
 
@@ -75,26 +84,31 @@ export const Header = () => {
               onClick={() => scrollToSection('paslaugos')}
               className="block w-full text-left text-white/90 hover:text-white transition-colors font-semibold text-lg"
             >
-              Paslaugos
+              {t.services}
             </button>
             <button 
               onClick={() => scrollToSection('projektai')}
               className="block w-full text-left text-white/90 hover:text-white transition-colors font-semibold text-lg"
             >
-              Projektai
+              {t.projects}
             </button>
             <button 
               onClick={() => scrollToSection('apie')}
               className="block w-full text-left text-white/90 hover:text-white transition-colors font-semibold text-lg"
             >
-              Apie mus
+              {t.about}
             </button>
+            
+            <div className="flex justify-start">
+              <LanguageSelector />
+            </div>
+            
             <button 
               onClick={() => scrollToSection('kontaktai')}
               className="w-full bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 text-white px-8 py-4 rounded-full font-bold hover:shadow-xl transition-all duration-300 animate-gradient-slide"
               style={{ backgroundSize: '200% 200%' }}
             >
-              Kontaktai
+              {t.contact}
             </button>
           </nav>
         )}

@@ -1,5 +1,6 @@
-
 import { Award, Users, Target, Zap, Rocket, Globe, Brain, Diamond, Star, Shield } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
+import { getTranslation } from '../translations';
 
 const features = [
   {
@@ -32,6 +33,9 @@ const achievements = [
 ];
 
 export const About = () => {
+  const { language } = useLanguage();
+  const t = getTranslation(language);
+
   return (
     <section id="apie" className="py-32 bg-gradient-to-br from-black via-slate-900/50 to-purple-900/30 relative overflow-hidden">
       {/* Advanced background effects */}
@@ -49,21 +53,20 @@ export const About = () => {
           <div className="text-center mb-24">
             <div className="inline-flex items-center gap-3 px-8 py-4 bg-black/40 backdrop-blur-xl border border-cyan-400/30 rounded-full text-cyan-400 font-bold mb-12 animate-pulse">
               <Star size={20} />
-              MŪSŲ DNR
+              {t.aboutLabel}
             </div>
 
             <h2 className="text-6xl md:text-8xl font-black mb-12 leading-tight">
               <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse">
-                ALFA
+                {t.aboutTitle1}
               </span>
               <br />
               <span className="bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent animate-pulse">
-                FILOSOFIJA
+                {t.aboutTitle2}
               </span>
             </h2>
             <p className="text-2xl text-white/80 max-w-5xl mx-auto leading-relaxed">
-              Mes nesame tiesiog agentūra – mes esame transformacijos katalizatorius, 
-              kuris keičia verslo ateities trajektorijas
+              {t.aboutDescription}
             </p>
           </div>
           

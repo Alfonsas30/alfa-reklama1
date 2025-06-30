@@ -1,5 +1,6 @@
-
 import { Monitor, Video, Target, Palette, TrendingUp, Globe, Rocket, Zap } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
+import { getTranslation } from '../translations';
 
 const services = [
   {
@@ -47,6 +48,9 @@ const services = [
 ];
 
 export const Services = () => {
+  const { language } = useLanguage();
+  const t = getTranslation(language);
+
   return (
     <section id="paslaugos" className="py-32 bg-gradient-to-br from-black via-gray-900 to-slate-900 relative overflow-hidden">
       {/* Cyber grid */}
@@ -62,21 +66,20 @@ export const Services = () => {
         <div className="text-center mb-24">
           <div className="inline-flex items-center gap-3 px-6 py-3 bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-full text-cyan-400 text-sm font-medium mb-12">
             <Zap size={16} />
-            ATEITIES TECHNOLOGIJOS
+            {t.servicesLabel}
           </div>
           
           <h2 className="text-6xl md:text-8xl font-black mb-12">
             <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-              PREMIUM
+              {t.servicesTitle1}
             </span>
             <br />
             <span className="bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
-              SPRENDIMAI
+              {t.servicesTitle2}
             </span>
           </h2>
           <p className="text-2xl text-white/80 max-w-5xl mx-auto leading-relaxed">
-            Aukščiausio lygio skaitmeninės rinkodaros technologijos, 
-            kurios formuoja ateities komunikacijos standartus
+            {t.servicesDescription}
           </p>
         </div>
         

@@ -1,7 +1,13 @@
+
 import { ArrowRight, Sparkles, Zap, Play } from 'lucide-react';
 import { BackgroundAnimation } from './BackgroundAnimation';
+import { useLanguage } from '../contexts/LanguageContext';
+import { getTranslation } from '../translations';
 
 export const Hero = () => {
+  const { language } = useLanguage();
+  const t = getTranslation(language);
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -34,24 +40,22 @@ export const Hero = () => {
           <div className="inline-flex items-center gap-3 px-6 py-3 bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-full text-cyan-400 text-sm font-medium mb-8 hover:border-cyan-400/50 transition-all duration-300">
             <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
             <Zap size={16} className="text-cyan-400" />
-            SISTEMA AKTYVUOTA • REKLAMOS ATEITIS
+            {t.heroStatusActive}
             <Sparkles size={16} className="text-purple-400" />
           </div>
 
           <h1 className="text-7xl md:text-9xl font-black mb-12 leading-none">
             <span className="block bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent drop-shadow-[0_0_50px_rgba(6,182,212,0.5)] animate-pulse">
-              ALFA
+              {t.heroTitle1}
             </span>
             <span className="block text-5xl md:text-7xl bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent font-light tracking-wider mt-4">
-              REKLAMA
+              {t.heroTitle2}
             </span>
           </h1>
           
           <div className="relative mb-16">
             <p className="text-2xl md:text-3xl text-white/90 max-w-5xl mx-auto leading-relaxed font-light">
-              Revoliuciniai <span className="text-cyan-400 font-semibold">skaitmeniniai sprendimai</span>, 
-              kurie formuoja ateities rinkodaros standartus. Mes ne tik kuriame kampanijas – 
-              mes <span className="text-purple-400 font-semibold">keičiame žaidimo taisykles</span>.
+              {t.heroDescription}
             </p>
             
             {/* Floating particles around text */}
@@ -69,7 +73,7 @@ export const Hero = () => {
               <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_30%,rgba(255,255,255,0.2)_50%,transparent_70%)] -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
               <div className="relative flex items-center gap-4">
                 <Play size={24} className="group-hover:rotate-90 transition-transform duration-300" />
-                Pradėti transformaciją
+                {t.heroButtonStart}
                 <ArrowRight size={24} className="group-hover:translate-x-3 transition-transform duration-300" />
               </div>
             </button>
@@ -79,7 +83,7 @@ export const Hero = () => {
               className="group px-12 py-6 bg-black/50 backdrop-blur-xl text-white font-bold text-xl rounded-2xl border-2 border-white/20 hover:bg-black/70 hover:border-cyan-400/50 transition-all duration-500 hover:scale-105 shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_40px_rgba(6,182,212,0.3)]"
             >
               <span className="bg-gradient-to-r from-white to-cyan-200 bg-clip-text text-transparent group-hover:from-cyan-400 group-hover:to-purple-400 transition-all duration-300">
-                Peržiūrėti portfelį
+                {t.heroButtonPortfolio}
               </span>
             </button>
           </div>
@@ -87,9 +91,9 @@ export const Hero = () => {
           {/* Enhanced holographic stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-4xl mx-auto">
             {[
-              { value: "500+", label: "Revoliucinių projektų", color: "cyan" },
-              { value: "15+", label: "Metų inovacijų", color: "purple" },
-              { value: "2M+", label: "Paveiktų žmonių", color: "pink" }
+              { value: t.heroStat1, label: t.heroStat1Label, color: "cyan" },
+              { value: t.heroStat2, label: t.heroStat2Label, color: "purple" },
+              { value: t.heroStat3, label: t.heroStat3Label, color: "pink" }
             ].map((stat, index) => (
               <div key={index} className="relative group">
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500"></div>

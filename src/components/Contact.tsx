@@ -4,8 +4,13 @@ import { ContactInfo } from './contact/ContactInfo';
 import { ContactMethods } from './contact/ContactMethods';
 import { ContactForm } from './contact/ContactForm';
 import { ContactCTA } from './contact/ContactCTA';
+import { useLanguage } from '../contexts/LanguageContext';
+import { getTranslation } from '../translations';
 
 export const Contact = () => {
+  const { language } = useLanguage();
+  const t = getTranslation(language);
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -37,21 +42,20 @@ export const Contact = () => {
           <div className="text-center mb-24">
             <div className="inline-flex items-center gap-3 px-8 py-4 bg-black/40 backdrop-blur-xl border border-cyan-400/30 rounded-full text-cyan-400 font-bold mb-12 animate-pulse">
               <Star size={20} className="text-yellow-400" />
-              PREMIUM KONSULTACIJOS PRIEINAMOS
+              {t.contactLabel}
             </div>
 
             <h2 className="text-6xl md:text-8xl font-black mb-12 leading-tight">
               <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse">
-                SUSISIEKITE
+                {t.contactTitle1}
               </span>
               <br />
               <span className="bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent animate-pulse">
-                SU MŪSŲ KOMANDA
+                {t.contactTitle2}
               </span>
             </h2>
             <p className="text-2xl text-white/80 max-w-5xl mx-auto leading-relaxed">
-              Pasiruošę transformuoti savo verslą? Susisiekite su premium ekspertų komanda 
-              ir pradėkite kelionę į neprilygstamą sėkmę.
+              {t.contactDescription}
             </p>
           </div>
           

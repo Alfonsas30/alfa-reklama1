@@ -1,5 +1,6 @@
-
 import { Zap, Heart, Mail, Phone, Send, Facebook, Instagram } from 'lucide-react';
+import { useLanguage } from '../contexts/LanguageContext';
+import { getTranslation } from '../translations';
 
 const socialLinks = [
   { icon: Facebook, href: 'https://www.facebook.com/profile.php?id=61578020543147', label: 'Facebook' },
@@ -7,14 +8,17 @@ const socialLinks = [
   { icon: Send, href: 'https://t.me/snlvlt/137', label: 'Telegram' }
 ];
 
-const quickLinks = [
-  { label: 'Paslaugos', href: '#paslaugos' },
-  { label: 'Projektai', href: '#projektai' },
-  { label: 'Apie mus', href: '#apie' },
-  { label: 'Kontaktai', href: '#kontaktai' }
-];
-
 export const Footer = () => {
+  const { language } = useLanguage();
+  const t = getTranslation(language);
+
+  const quickLinks = [
+    { label: t.services, href: '#paslaugos' },
+    { label: t.projects, href: '#projektai' },
+    { label: t.about, href: '#apie' },
+    { label: t.contact, href: '#kontaktai' }
+  ];
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId.replace('#', ''));
     if (element) {
@@ -80,7 +84,7 @@ export const Footer = () => {
           {/* Quick Links */}
           <div>
             <h4 className="text-2xl font-black mb-8 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-              Greitos nuorodos
+              {t.quickLinks}
             </h4>
             <div className="space-y-4">
               {quickLinks.map((link, index) => (
@@ -98,7 +102,7 @@ export const Footer = () => {
           {/* Social Links */}
           <div>
             <h4 className="text-2xl font-black mb-8 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-              Socialiniai tinklai
+              {t.socialMedia}
             </h4>
             <div className="flex flex-col gap-4">
               {socialLinks.map((social, index) => {
@@ -128,13 +132,13 @@ export const Footer = () => {
         <div className="border-t border-white/10 pt-12">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div className="flex items-center gap-3 text-white/60 text-sm">
-              <span>© 2025 Alfa Reklama. Sukurta su</span>
+              <span>{t.footerCopyright}</span>
               <Heart size={16} className="text-red-400 fill-current animate-pulse" />
-              <span>aistra ir profesionalumu</span>
+              <span>{t.footerLove}</span>
             </div>
 
             <div className="text-white/40 text-sm text-center">
-              Visos teisės saugomos • Premium skaitmeninio marketingo sprendimai
+              {t.footerRights}
             </div>
           </div>
         </div>

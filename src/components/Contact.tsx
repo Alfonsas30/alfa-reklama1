@@ -1,3 +1,4 @@
+
 import { Phone, Mail, Clock, MessageCircle, Zap, Rocket, Star, Send, Calendar } from 'lucide-react';
 import { useState } from 'react';
 import { Input } from '@/components/ui/input';
@@ -74,7 +75,7 @@ export const Contact = () => {
       const form = e.target as HTMLFormElement;
       const formDataToSend = new FormData(form);
       
-      const response = await fetch('https://formsubmit.co/el/fuwaci', {
+      const response = await fetch('https://formsubmit.co/gmbhinvest333@gmail.com', {
         method: 'POST',
         body: formDataToSend
       });
@@ -244,6 +245,7 @@ export const Contact = () => {
               <form onSubmit={handleSubmit} className="max-w-2xl mx-auto">
                 <input type="hidden" name="_subject" value="Nauja žinutė iš Alfa Reklama svetainės" />
                 <input type="hidden" name="_captcha" value="false" />
+                <input type="hidden" name="_next" value="https://alfreklamatech.lovable.app/#kontaktai" />
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                   <div className="space-y-2">
